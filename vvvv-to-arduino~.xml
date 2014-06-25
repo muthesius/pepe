@@ -3,15 +3,15 @@
    <BOUNDS type="Window" left="2880" top="1995" width="19200" height="15750">
    </BOUNDS>
    <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
-   <BOUNDS type="Node" left="10680" top="1515" width="100" height="100">
+   <BOUNDS type="Node" left="3420" top="1545" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Time Mode" slicecount="1" values="Increment">
    </PIN>
    </NODE>
    <NODE systemname="mixer" filename="subs\mixer.v4p" componentmode="Hidden" id="123" nodename="subs\mixer.v4p">
-   <BOUNDS type="Node" left="1800" top="2040" width="100" height="100">
+   <BOUNDS type="Node" left="1785" top="2040" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1800" top="2040" width="4800" height="3600">
+   <BOUNDS type="Box" left="1785" top="2040" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="4980" top="5685" width="9000" height="6000">
    </BOUNDS>
@@ -33,9 +33,9 @@
    <LINK srcnodeid="123" srcpinname="OutputForArduino" dstnodeid="124" dstpinname="Input String">
    </LINK>
    <NODE systemname="timeliner" filename="subs\timeliner.v4p" nodename="subs\timeliner.v4p" componentmode="Hidden" id="135">
-   <BOUNDS type="Node" left="1800" top="1530" width="0" height="0">
+   <BOUNDS type="Node" left="1771" top="1536" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="1800" top="1530" width="6735" height="6970">
+   <BOUNDS type="Box" left="0" top="0" width="6735" height="6970">
    </BOUNDS>
    <BOUNDS type="Window" left="18676" top="10956" width="6735" height="6970">
    </BOUNDS>

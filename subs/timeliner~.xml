@@ -1,0 +1,159 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.2.dtd" >
+   <PATCH nodename="C:\uni\pepe\pepe\subs\timeliner.v4p" systemname="timeliner" filename="C:\uni\pepe\pepe\subs\timeliner.v4p">
+   <NODE systemname="Timeliner (Animation)" filename="%VVVV%\lib\nodes\plugins\Timeliner.dll" nodename="Timeliner (Animation)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1500" top="3495" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1500" top="3495" width="12030" height="3570">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1875" top="7605" width="23070" height="5010">
+   </BOUNDS>
+   <PIN pinname="Translate" slicecount="1" values="70.4531">
+   </PIN>
+   <PIN pinname="Scale" slicecount="1" values="4.6185">
+   </PIN>
+   <PIN pinname="Pin Settings" slicecount="2" values="|&lt;PIN Name=&quot;Ruler0&quot; Type=&quot;Ruler&quot; SliceCount=&quot;0&quot; Height=&quot;40&quot; Parent=&quot;0&quot; /&gt;|,|&lt;PIN Name=&quot;Value0&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|">
+   </PIN>
+   <PIN pinname="Value0-Time0" slicecount="12" values="1.89999972343445,5.21999979019165,7.73999977111816,24.4483854486488,37.7878341674805,40.9762878417969,55.421932220459,59.0658798217773,69.1518020629883,94.4741497670521,264.423706054688,315.854217529297">
+   </PIN>
+   <PIN pinname="Value0-Value0" slicecount="12" values="0.0399999991059303,0.680000007152557,0.280000001192093,0.533333361148834,0.899999976158142,0.16666667163372,0.920000016689301,0.259999990463257,0.846666693687439,0.0866666666666667,0.900000027020773,0.12">
+   </PIN>
+   <PIN pinname="Value0-InType0" slicecount="12" values="2,2,2,2,2,2,2,2,2,2,2,2">
+   </PIN>
+   <PIN pinname="Value0-OutType0" slicecount="12" values="2,2,2,2,2,2,2,2,2,2,2,2">
+   </PIN>
+   <PIN pinname="Time In" visible="1">
+   </PIN>
+   <PIN pinname="Value0" visible="1">
+   </PIN>
+   <PIN pinname="Set Time" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Value1-Time0">
+   </PIN>
+   <PIN pinname="Value1-Value0">
+   </PIN>
+   <PIN pinname="Value1-InType0">
+   </PIN>
+   <PIN pinname="Value1-OutType0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Queue (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Queue (Spreads)" componentmode="Hidden" id="1" hiddenwhenlocked="0">
+   <BOUNDS type="Node" left="3330" top="4275" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Frame Count" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Insert" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="2" hiddenwhenlocked="0">
+   <BOUNDS type="Node" left="3510" top="2760" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Up" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Clamp">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3" systemname="IOBox (Value Advanced)" hiddenwhenlocked="0">
+   <BOUNDS type="Box" left="5235" top="2055" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="2055" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Reset - Reset|">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="4" hiddenwhenlocked="0">
+   <BOUNDS type="Node" left="4035" top="1500" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4035" top="1500" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Minuten">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="5" hiddenwhenlocked="0">
+   <BOUNDS type="Node" left="4005" top="2175" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="60">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="6" hiddenwhenlocked="0">
+   <BOUNDS type="Node" left="3495" top="3525" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="CAR (Spreads)" nodename="CAR (Spreads)" componentmode="Hidden" id="7" hiddenwhenlocked="0">
+   <BOUNDS type="Node" left="3315" top="4875" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Remainder" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="8" hiddenwhenlocked="0">
+   <BOUNDS type="Node" left="3720" top="5370" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="value_timeliner">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="0" dstpinname="Time In" linkstyle="VHV">
+   <LINKPOINT x="3510" y="3248">
+   </LINKPOINT>
+   <LINKPOINT x="1995" y="3248">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Value0" dstnodeid="1" dstpinname="Input" linkstyle="VHV">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="OnChange" dstnodeid="1" dstpinname="Insert">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Reset" hiddenwhenlocked="0">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="2" dstpinname="Maximum" hiddenwhenlocked="0">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Reset" hiddenwhenlocked="0">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Remainder" dstnodeid="8" dstpinname="Input Value" hiddenwhenlocked="0">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Input 1" hiddenwhenlocked="0">
+   </LINK>
+   <BOUNDS type="Window" left="18676" top="10956" width="6735" height="6970">
+   </BOUNDS>
+   </PATCH>
