@@ -1,0 +1,139 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.2.dtd" >
+   <PATCH nodename="C:\uni\pepe\pepe\subs\mixer.v4p" systemname="mixer" filename="C:\uni\pepe\pepe\subs\mixer.v4p">
+   <BOUNDS type="Window" left="4980" top="5685" width="9000" height="6000">
+   </BOUNDS>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="9">
+   <BOUNDS type="Node" left="3420" top="1410" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3420" top="1410" width="6435" height="9810">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="|&cr;&lf;const int ledPin =  13;     &cr;&lf;int ledPower = 0;&cr;&lf;          &cr;&lf;long previousMillis = 0;        &cr;&lf;&cr;&lf;&cr;&lf;long interval = 10;&cr;&lf;int intervalCounter = -1;&cr;&lf;&cr;&lf;#include &lt;avr/pgmspace.h&gt;&cr;&lf;&cr;&lf;XXPART_ARR&cr;&lf;&cr;&lf;void setup() {&cr;&lf;  pinMode(ledPin, OUTPUT); &cr;&lf;  Serial.begin(9600);  &cr;&lf;}&cr;&lf;&cr;&lf;void loop()&cr;&lf;{&cr;&lf;&cr;&lf;  unsigned long currentMillis = millis();&cr;&lf; &cr;&lf;  if(currentMillis - previousMillis &gt; interval) {&cr;&lf;    // save the last time you blinked the LED &cr;&lf;    previousMillis = currentMillis;   &cr;&lf;    intervalCounter++;&cr;&lf;    &cr;&lf;XXPART_Länge&cr;&lf;&cr;&lf;&cr;&lf;    //Serial.print(intervalCounter);&cr;&lf;   &cr;&lf;    //Serial.print(&quot;------&quot;);&cr;&lf;    &cr;&lf;XXPART_IFS&cr;&lf;    &cr;&lf;    &cr;&lf;     analogWrite(ledPin, ledPower);   &cr;&lf;     &cr;&lf;&cr;&lf;  }&cr;&lf;}|">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="12165" top="11175" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output String" dstnodeid="8" dstpinname="Input" linkstyle="PolyLine">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="12525" top="8430" width="4080" height="1560">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12525" top="8430" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="3" values="XXPART_ARR,XXPART_Länge,XXPART_IFS">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="8" dstpinname="From">
+   </LINK>
+   <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="12900" top="7470" width="3210" height="270">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="8" dstpinname="To">
+   </LINK>
+   <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="12915" top="5985" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" values="LineFeed">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="16035" top="5985" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" values="LineFeed">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="6" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="6" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="array_builder" filename="array_builder.v4p" nodename="subs\array_builder.v4p" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="12900" top="4995" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="12900" top="4995" width="7180" height="14250">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13408" top="6107" width="7180" height="14250">
+   </BOUNDS>
+   <PIN pinname="Arrays" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Arrays" dstnodeid="5" dstpinname="Input">
+   </LINK>
+   <NODE systemname="replay" filename="replay.v4p" nodename="subs\replay.v4p" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="14475" top="4995" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14475" top="4995" width="3835" height="7590">
+   </BOUNDS>
+   <BOUNDS type="Window" left="34297" top="16997" width="3835" height="7590">
+   </BOUNDS>
+   <PIN pinname="timer_replay" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="timer_replay" dstnodeid="6" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="ifselse" filename="ifselse.v4p" nodename="subs\ifselse.v4p" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="16035" top="4995" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="16035" top="4995" width="8335" height="12030">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10260" top="4725" width="13395" height="12030">
+   </BOUNDS>
+   <PIN pinname="IfElse" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="IfElse" dstnodeid="4" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="12180" top="12480" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12180" top="12480" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="OutputForArduino">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="0" dstpinname="Input String">
+   </LINK>
+   </PATCH>
