@@ -7,9 +7,9 @@
    </BOUNDS>
    <BOUNDS type="Window" left="14355" top="1980" width="14055" height="8025">
    </BOUNDS>
-   <PIN pinname="Translate" slicecount="1" values="192.6509">
+   <PIN pinname="Translate" slicecount="1" values="12.3933">
    </PIN>
-   <PIN pinname="Scale" slicecount="1" values="1.5751">
+   <PIN pinname="Scale" slicecount="1" values="8.3282">
    </PIN>
    <PIN pinname="Pin Settings" slicecount="2" values="|&lt;PIN Name=&quot;Ruler0&quot; Type=&quot;Ruler&quot; SliceCount=&quot;0&quot; Height=&quot;40&quot; Parent=&quot;0&quot; /&gt;|,|&lt;PIN Name=&quot;Value0&quot; Type=&quot;Value&quot; SliceCount=&quot;3&quot; Height=&quot;259&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Linear&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|">
    </PIN>
@@ -27,13 +27,13 @@
    </PIN>
    <PIN pinname="Value1-OutType0">
    </PIN>
-   <PIN pinname="Value0-Time0" slicecount="2" values="0,240">
+   <PIN pinname="Value0-Time0" slicecount="20" values="0,5.43177554942063,5.43177604675293,14.3200998306274,14.9549798965454,18.1293811798096,20.6689033508301,47.3338737487793,86.0615692138672,89.870849609375,130.503189086914,142.56591796875,153.993759155273,160.977447509766,187.007537841797,188.277297973633,212.402740478516,212.402740478516,240,242.242126464844">
    </PIN>
-   <PIN pinname="Value0-Value0" slicecount="2" values="0,1">
+   <PIN pinname="Value0-Value0" slicecount="20" values="0,0.80232560634613,0.441860467195511,0.627906978130341,0.383720934391022,0.162790700793266,0.848837196826935,0.279069781303406,0.779069781303406,0.465116292238235,0.31395348906517,0.953488349914551,0.67441862821579,0.127906978130341,0.511627912521362,0.209302321076393,0.790697693824768,0.465116292238235,1,0.209302321076393">
    </PIN>
-   <PIN pinname="Value0-InType0" slicecount="2" values="1,1">
+   <PIN pinname="Value0-InType0" slicecount="20" values="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
    </PIN>
-   <PIN pinname="Value0-OutType0" slicecount="2" values="1,1">
+   <PIN pinname="Value0-OutType0" slicecount="20" values="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
    </PIN>
    <PIN pinname="Value0-Time2">
    </PIN>
@@ -109,7 +109,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1920" top="1185" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>

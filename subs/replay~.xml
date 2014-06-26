@@ -72,18 +72,10 @@
    </LINK>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="3" dstpinname="Input String">
    </LINK>
+   <LINK srcnodeid="5" srcpinname="Count" dstnodeid="2" dstpinname="Input">
+   </LINK>
    <LINK srcnodeid="4" srcpinname="Input Value" dstnodeid="5" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="14220" top="3420" width="3840" height="7590">
+   <BOUNDS type="Window" left="34297" top="16997" width="3835" height="7590">
    </BOUNDS>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="3435" top="3810" width="435" height="270">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="Global_Rasterrung">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="6" srcpinname="Input Value" dstnodeid="2" dstpinname="Input">
-   </LINK>
    </PATCH>

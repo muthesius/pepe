@@ -8,12 +8,12 @@
    <PIN pinname="Time Mode" slicecount="1" values="Increment">
    </PIN>
    </NODE>
-   <NODE systemname="mixer" filename="subs\mixer.v4p" componentmode="InAWindow" id="123" nodename="subs\mixer.v4p">
+   <NODE systemname="mixer" filename="subs\mixer.v4p" componentmode="Hidden" id="123" nodename="subs\mixer.v4p">
    <BOUNDS type="Node" left="1800" top="2040" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="1800" top="2040" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="12090" top="5415" width="15975" height="9600">
+   <BOUNDS type="Window" left="14595" top="5985" width="19200" height="15750">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="124" systemname="IOBox (String)">
@@ -39,5 +39,27 @@
    </BOUNDS>
    <BOUNDS type="Window" left="11895" top="5985" width="11685" height="9915">
    </BOUNDS>
+   <PIN pinname="Minuten" slicecount="1" values="4">
+   </PIN>
    </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="136" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2820" top="795" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2820" top="795" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="136" srcpinname="Y Output Value" dstnodeid="135" dstpinname="berechne Arry">
+   </LINK>
    </PATCH>

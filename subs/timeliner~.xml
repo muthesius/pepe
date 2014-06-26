@@ -11,7 +11,7 @@
    </PIN>
    <PIN pinname="Scale" slicecount="1" values="1.5751">
    </PIN>
-   <PIN pinname="Pin Settings" slicecount="2" values="|&lt;PIN Name=&quot;Ruler0&quot; Type=&quot;Ruler&quot; SliceCount=&quot;0&quot; Height=&quot;40&quot; Parent=&quot;0&quot; /&gt;|,|&lt;PIN Name=&quot;Value0&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;259&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Linear&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|">
+   <PIN pinname="Pin Settings" slicecount="2" values="|&lt;PIN Name=&quot;Ruler0&quot; Type=&quot;Ruler&quot; SliceCount=&quot;0&quot; Height=&quot;40&quot; Parent=&quot;0&quot; /&gt;|,|&lt;PIN Name=&quot;Value0&quot; Type=&quot;Value&quot; SliceCount=&quot;3&quot; Height=&quot;259&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Linear&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|">
    </PIN>
    <PIN pinname="Time In" visible="1">
    </PIN>
@@ -34,6 +34,22 @@
    <PIN pinname="Value0-InType0" slicecount="2" values="1,1">
    </PIN>
    <PIN pinname="Value0-OutType0" slicecount="2" values="1,1">
+   </PIN>
+   <PIN pinname="Value0-Time2">
+   </PIN>
+   <PIN pinname="Value0-Value2">
+   </PIN>
+   <PIN pinname="Value0-InType2">
+   </PIN>
+   <PIN pinname="Value0-OutType2">
+   </PIN>
+   <PIN pinname="Value0-Time1" slicecount="1" values="7.33641672134399">
+   </PIN>
+   <PIN pinname="Value0-Value1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Value0-InType1" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Value0-OutType1" slicecount="1" values="2">
    </PIN>
    </NODE>
    <NODE systemname="Queue (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Queue (Spreads)" componentmode="Hidden" id="1" hiddenwhenlocked="0">
