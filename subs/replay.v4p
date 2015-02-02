@@ -5,7 +5,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1500" top="1500" width="5760" height="1785">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="|    if(XXLänge &lt;= intervalCounter){&cr;&lf;     intervalCounter = 0;&cr;&lf;    }|">
+   <PIN pinname="Input String" slicecount="1" values="|    if(XXLänge &lt;= intervalCounter){&cr;&lf;     intervalCounter = 0;&cr;&lf;     snooze = false;&cr;&lf;    }|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -74,7 +74,7 @@
    </LINK>
    <LINK srcnodeid="4" srcpinname="Input Value" dstnodeid="5" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="14220" top="3420" width="3840" height="7590">
+   <BOUNDS type="Window" left="6105" top="3495" width="6960" height="7590">
    </BOUNDS>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="6">
    <BOUNDS type="Node" left="3435" top="3810" width="435" height="270">

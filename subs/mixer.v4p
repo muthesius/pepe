@@ -1,13 +1,13 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.2.dtd" >
-   <PATCH nodename="C:\uni\pepe\pepe\subs\mixer.v4p" systemname="mixer" filename="C:\uni\pepe\pepe\subs\mixer.v4p">
-   <BOUNDS type="Window" left="11280" top="615" width="19200" height="15750">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subs\mixer.v4p" systemname="mixer" filename="C:\uni\pepe\pepe\subs\mixer.v4p" scrollx="7215" scrolly="2280">
+   <BOUNDS type="Window" left="0" top="2715" width="12495" height="15750">
    </BOUNDS>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="9">
-   <BOUNDS type="Node" left="3420" top="1410" width="100" height="100">
+   <BOUNDS type="Node" left="3015" top="1455" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3420" top="1410" width="6435" height="9810">
+   <BOUNDS type="Box" left="3015" top="1455" width="6255" height="12645">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="|&cr;&lf;const int ledPin =  13;     &cr;&lf;&cr;&lf;&cr;&lf;long previousMillis = 0;        &cr;&lf;long interval = 10;&cr;&lf;int intervalCounter = -1;&cr;&lf;&cr;&lf;#include &lt;avr/pgmspace.h&gt;&cr;&lf;&cr;&lf;XXPART_ARR&cr;&lf;&cr;&lf;void setup() {&cr;&lf;  pinMode(ledPin, OUTPUT); &cr;&lf;  Serial.begin(9600);  &cr;&lf;}&cr;&lf;&cr;&lf;void loop()&cr;&lf;{&cr;&lf;&cr;&lf;  unsigned long currentMillis = millis();&cr;&lf; &cr;&lf;  if(currentMillis - previousMillis &gt; interval) {&cr;&lf;    previousMillis = currentMillis;   &cr;&lf;    intervalCounter++;&cr;&lf;    &cr;&lf;XXPART_Länge&cr;&lf;    &cr;&lf;XXPART_IFS&cr;&lf;    &cr;&lf;XXDEBUG    &cr;&lf;&cr;&lf;     analogWrite(ledPin, value_LINE_0);   &cr;&lf;     &cr;&lf;&cr;&lf;  }&cr;&lf;}|">
+   <PIN pinname="Input String" slicecount="1" values="|const int arbeits_PIN =  3;&cr;&lf;const int pause_PIN =  5;     &cr;&lf;&cr;&lf;const int micro_PIN =  0;&cr;&lf;&cr;&lf;&cr;&lf;long previousMillis = 0;        &cr;&lf;long interval = 1000;&cr;&lf;int intervalCounter = -1;&cr;&lf;&cr;&lf;&cr;&lf;boolean snooze = false;&cr;&lf;&cr;&lf;#include &lt;avr/pgmspace.h&gt;&cr;&lf;&cr;&lf;XXPART_ARR&cr;&lf;&cr;&lf;void setup() {&cr;&lf;  pinMode(arbeits_PIN, OUTPUT); &cr;&lf;  pinMode(pause_PIN, OUTPUT);&cr;&lf;  Serial.begin(9600);  &cr;&lf;}&cr;&lf;&cr;&lf;void loop()&cr;&lf;{&cr;&lf;  boolean snoozeSensor = analogRead(micro_PIN);&cr;&lf;  unsigned long currentMillis = millis();&cr;&lf; &cr;&lf;  if(currentMillis - previousMillis &gt; interval) {&cr;&lf;    previousMillis = currentMillis;   &cr;&lf;    intervalCounter++;&cr;&lf;    &cr;&lf;XXPART_Länge&cr;&lf;    &cr;&lf;XXPART_IFS&cr;&lf;    &cr;&lf;XXDEBUG    &cr;&lf;&cr;&lf;   if(1500 &lt;= intervalCounter &amp;&amp; snoozeSensor &lt; 100){&cr;&lf;     snooze = true;&cr;&lf;     intervalCounter = 1200;&cr;&lf;    }&cr;&lf;    &cr;&lf;   &cr;&lf;    &cr;&lf;  if(snooze == true) {&cr;&lf;     analogWrite(arbeits_PIN, value_LINE_2);   &cr;&lf;  } else {&cr;&lf;     analogWrite(arbeits_PIN, value_LINE_0);   &cr;&lf;  }&cr;&lf;  &cr;&lf;     analogWrite(pause_PIN, value_LINE_1);   &cr;&lf;     &cr;&lf;     &cr;&lf;&cr;&lf;  }&cr;&lf;}|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -105,7 +105,7 @@
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="40">
    <BOUNDS type="Node" left="18945" top="6615" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="|Serial.print(intervalCounter);&cr;&lf;Serial.print(&quot;\t&quot;);   &cr;&lf;Serial.print(value_LINE_0);&cr;&lf;&lf;Serial.print(&quot;\t&quot;);   &cr;&lf;Serial.print(value_LINE_1);&cr;&lf;&lf;Serial.print(&quot;\t&quot;);   &cr;&lf;Serial.print(value_LINE_2);&cr;&lf;Serial.println(&quot;&quot;);&cr;&lf;|">
    </PIN>
    <PIN pinname="Input 1" slicecount="1" values="||">
    </PIN>
@@ -124,14 +124,12 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="40" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="40" srcpinname="Output" dstnodeid="6" dstpinname="Input 4">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="44" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="18930" top="4995" width="480" height="465">
+   <BOUNDS type="Box" left="18885" top="5085" width="480" height="465">
    </BOUNDS>
-   <BOUNDS type="Node" left="18930" top="4995" width="0" height="0">
+   <BOUNDS type="Node" left="18885" top="5085" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
@@ -151,7 +149,7 @@
    <LINK srcnodeid="44" srcpinname="Y Output Value" dstnodeid="40" dstpinname="Switch">
    </LINK>
    <NODE id="2" componentmode="Hidden" systemname="replay" filename="replay.v4p" nodename="subs\replay.v4p">
-   <BOUNDS type="Window" left="14220" top="3420" width="3840" height="7590">
+   <BOUNDS type="Window" left="6105" top="3495" width="6960" height="7590">
    </BOUNDS>
    <BOUNDS type="Node" left="14895" top="4995" width="0" height="0">
    </BOUNDS>
@@ -174,4 +172,24 @@
    </NODE>
    <LINK srcnodeid="48" srcpinname="Output" dstnodeid="6" dstpinname="Input 3">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="49" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="20715" top="6000" width="2895" height="2610">
+   </BOUNDS>
+   <BOUNDS type="Node" left="20715" top="6000" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="|        Serial.print(intervalCounter);&cr;&lf;        Serial.print(&quot;\t&quot;);   &cr;&lf;        Serial.print(value_LINE_0);&cr;&lf;        &cr;&lf;        Serial.print(&quot;\t&quot;);   &cr;&lf;        Serial.print(value_LINE_1);&cr;&lf;        &cr;&lf;        Serial.print(&quot;\t&quot;);   &cr;&lf;        Serial.print(value_LINE_2);&cr;&lf;        Serial.print(&quot;&quot;);&cr;&lf;        &cr;&lf;        Serial.print(&quot;\t&quot;);   &cr;&lf;        Serial.print(snooze);&cr;&lf;        Serial.print(&quot;&quot;);&cr;&lf;    &cr;&lf;        Serial.print(&quot;\t&quot;);   &cr;&lf;        Serial.print(snoozeSensor);&cr;&lf;        Serial.println(&quot;&quot;);&cr;&lf;    |">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="49" srcpinname="Output String" dstnodeid="40" dstpinname="Input 2">
+   </LINK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
    </PATCH>

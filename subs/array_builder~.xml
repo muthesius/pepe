@@ -121,7 +121,7 @@
    <BOUNDS type="Window" left="9540" top="5040" width="16155" height="14250">
    </BOUNDS>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="7110" top="6105" width="100" height="100">
+   <BOUNDS type="Node" left="7050" top="6210" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -143,7 +143,7 @@
    </PIN>
    </NODE>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="31">
-   <BOUNDS type="Node" left="11160" top="6240" width="435" height="270">
+   <BOUNDS type="Node" left="11415" top="3045" width="435" height="270">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="Global_Rasterrung">
    </PIN>
@@ -181,7 +181,7 @@
    <LINK srcnodeid="33" srcpinname="Output" dstnodeid="26" dstpinname="Input">
    </LINK>
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="35">
-   <BOUNDS type="Node" left="7095" top="5445" width="100" height="100">
+   <BOUNDS type="Node" left="6765" top="5295" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -199,7 +199,7 @@
    <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="51">
    <BOUNDS type="Node" left="8400" top="8310" width="100" height="100">
    </BOUNDS>
-   <PIN pinname=".. To [" slicecount="1" values="240" visible="1">
+   <PIN pinname=".. To [" slicecount="1" visible="1" values="240">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -326,4 +326,12 @@
    </LINK>
    <LINK srcnodeid="26" srcpinname="Output" dstnodeid="24" dstpinname="To">
    </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="73">
+   <BOUNDS type="Node" left="7035" top="900" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7035" top="900" width="6000" height="2820">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="|    Serial.print(intervalCounter);&cr;&lf;   &cr;&lf;    Serial.print(&quot;------&quot;);&cr;&lf;      Serial.println(value_LINE_0);  &cr;&lf;&cr;&lf;|">
+   </PIN>
+   </NODE>
    </PATCH>
