@@ -13,7 +13,7 @@ using VVVV.Core.Logging;
 namespace VVVV.Nodes
 {
 	//create your own enum type or use any other .net enum
-	public enum MyEnum
+	public enum PlayNum
 	{
 		Pin0,
 		Pin1,
@@ -34,7 +34,7 @@ namespace VVVV.Nodes
 	{
 		#region fields & pins
 		[Input("Input", DefaultEnumEntry = "B")]
-		public IDiffSpread<MyEnum> FInput;
+		public IDiffSpread<PlayNum> FInput;
 
 		[Output("Name")]
 		public ISpread<string> FNameOutput;
@@ -54,7 +54,7 @@ namespace VVVV.Nodes
 
 			if (FInput.IsChanged) {
 				for (int i = 0; i < SpreadMax; i++) {
-					FNameOutput[i] = Enum.GetName(typeof(MyEnum), FInput[i]);
+					FNameOutput[i] = Enum.GetName(typeof(PlayNum), FInput[i]);
 					FOrdOutput[i] = (int)FInput[i];
 				}
 
