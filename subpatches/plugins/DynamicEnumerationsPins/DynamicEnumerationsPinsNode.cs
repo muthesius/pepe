@@ -14,16 +14,19 @@ using VVVV.Core.Logging;
 namespace VVVV.Nodes
 {
 	#region PluginInfo
-	[PluginInfo(Name = "OutputPepe", Category = "Enumerations", Version = "Dynamic", Help = "Basic template with dynamic custom enumeration", Tags = "")]
+	[PluginInfo(Name = "Pins", Category = "Enumerations", Version = "Dynamic", Help = "Basic template with dynamic custom enumeration", Tags = "")]
 	#endregion PluginInfo
-	public class DynamicEnumerationsOutputPepeNode : IPluginEvaluate
+	public class DynamicEnumerationsPinsNode : IPluginEvaluate
 	{
 		#region fields & pins
-		[Input("Input", EnumName = "OutputPepe")]
+		[Input("Input", EnumName = "MyDynamicEnum")]
 		public IDiffSpread<EnumEntry> FInput;
 
 		[Input("UpdateEnum", IsBang = true)]
 		public ISpread<bool> FChangeEnum;
+		
+		[Input("Enum Variable")]
+		public ISpread<string> EnumVaribl;
 
 		[Input("Enum Entries")]
 		public ISpread<string> FEnumStrings;
@@ -40,32 +43,15 @@ namespace VVVV.Nodes
 
 		//add some entries to the enum in the constructor
 		[ImportingConstructor()]
-		public DynamicEnumerationsOutputPepeNode()
+		public DynamicEnumerationsPinsNode()
 		{
 			var s = new string[] {
-				"Digital_02",
-				"Digital_03",
-				"Digital_04",
-				"Digital_05",
-				"Digital_06",
-				"Digital_07",
-				"Digital_08",
-				"Digital_09",
-				"Digital_10",
-				"Digital_11",
-				"Digital_12",
-				"Digital_13",
-				"Analog_A0",
-				"Analog_A1",
-				"Analog_A2",
-				"Analog_A3",
-				"Analog_A4",
-				"Analog_A5",
-				"42"
+				"one",
+				"two"
 			};
 			//Please rename your Enum Type to avoid 
 			//numerous "MyDynamicEnum"s in the system
-			EnumManager.UpdateEnum("OutputPepe", "42", s);
+			EnumManager.UpdateEnum(EnumVarible, "two", s);
 		}
 
 		//called when data for any output pin is requested
@@ -75,7 +61,7 @@ namespace VVVV.Nodes
 			FOrdOutput.SliceCount = FInput.SliceCount;
 
 			if ((FChangeEnum[0]) && (FEnumStrings.SliceCount > 0)) {
-				EnumManager.UpdateEnum("OutputPepe", FEnumStrings[0], FEnumStrings.ToArray());
+				EnumManager.UpdateEnum(EnumVarible, FEnumStrings[0], FEnumStrings.ToArray());
 			}
 
 			if (FInput.IsChanged) {
