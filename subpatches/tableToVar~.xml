@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\tableToVar.v4p" scrollx="2880" scrolly="1845" systemname="tableToVar" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\tableToVar.v4p">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\tableToVar.v4p" scrollx="2880" scrolly="1485" systemname="tableToVar" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\tableToVar.v4p">
    <NODE id="0" systemname="Pad (String)" nodename="Pad (String)" componentmode="Hidden">
    <BOUNDS type="Node" left="3885" top="3210" width="100" height="100">
    </BOUNDS>
@@ -119,9 +119,9 @@
    </PIN>
    </NODE>
    <NODE id="11" systemname="Timeline (Enumerations Dynamic)" filename="plugins\DynamicEnumerationstimeline\DynamicEnumerationstimeline.csproj" nodename="Timeline (Enumerations Dynamic)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="5970" top="7905" width="2970" height="270">
+   <BOUNDS type="Node" left="5865" top="8085" width="2970" height="270">
    </BOUNDS>
-   <PIN pinname="UpdateEnum" visible="1" pintype="Input">
+   <PIN pinname="UpdateEnum" visible="1" pintype="Input" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Enum Entries" visible="1" pintype="Input">
    </PIN>
@@ -129,7 +129,7 @@
    </PIN>
    <PIN pinname="Name" visible="1" pintype="Output">
    </PIN>
-   <BOUNDS type="Box" left="0" top="0" width="2400" height="1800">
+   <BOUNDS type="Box" left="0" top="240" width="2400" height="1800">
    </BOUNDS>
    <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
    </BOUNDS>
@@ -306,6 +306,24 @@
    </NODE>
    <LINK srcnodeid="11" srcpinname="Name" dstnodeid="20" dstpinname="Input String">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="11" dstpinname="UpdateEnum">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7980" top="7320" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7980" top="7320" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="11" dstpinname="UpdateEnum">
    </LINK>
    </PATCH>

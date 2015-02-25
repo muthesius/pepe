@@ -324,6 +324,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="11" dstpinname="UpdateEnum">
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="11" dstpinname="UpdateEnum">
    </LINK>
    </PATCH>

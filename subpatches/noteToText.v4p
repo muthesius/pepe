@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\noteToText.v4p" systemname="noteToText" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\noteToText.v4p" scrollx="3810" scrolly="5805">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\noteToText.v4p" systemname="noteToText" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\noteToText.v4p" scrollx="4950" scrolly="3420">
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="7200" top="1560" width="100" height="100">
    </BOUNDS>
@@ -609,6 +609,8 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Bang">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="179" srcpinname="Y Output Value" dstnodeid="153" dstpinname="Simulate">
    </LINK>
@@ -626,6 +628,8 @@
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="180" srcpinname="Y Output Value" dstnodeid="151" dstpinname="Simulate">

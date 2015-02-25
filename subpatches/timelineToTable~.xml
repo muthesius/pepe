@@ -231,7 +231,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" pintype="Input" visible="1" values="128">
+   <PIN pinname="Input 2" slicecount="1" pintype="Input" visible="1" values="255">
    </PIN>
    <PIN pinname="Input 1" visible="1" pintype="Input">
    </PIN>

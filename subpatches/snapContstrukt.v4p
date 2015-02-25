@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\snapContstrukt.v4p" scrollx="0" scrolly="5400" systemname="snapContstrukt" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\snapContstrukt.v4p">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\snapContstrukt.v4p" scrollx="0" scrolly="0" systemname="snapContstrukt" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\snapContstrukt.v4p">
    <NODE componentmode="Hidden" id="0" nodename=":PLUGINS:\RegExprNodes.dll|VVVV.Nodes.RegExprReplaceNode" systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll">
    <BOUNDS height="270" left="1500" top="7020" type="Node" width="3720">
    </BOUNDS>
@@ -487,7 +487,7 @@
    </PIN>
    </NODE>
    <NODE id="39" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
-   <BOUNDS type="Node" left="3135" top="4200" width="100" height="100">
+   <BOUNDS type="Node" left="3135" top="4200" width="1020" height="270">
    </BOUNDS>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
@@ -501,7 +501,7 @@
    </PIN>
    </NODE>
    <NODE id="38" systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden">
-   <BOUNDS type="Node" left="3615" top="3480" width="100" height="100">
+   <BOUNDS type="Node" left="4155" top="2640" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -511,9 +511,11 @@
    </PIN>
    </NODE>
    <NODE id="37" systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden">
-   <BOUNDS type="Node" left="2340" top="3045" width="100" height="100">
+   <BOUNDS type="Node" left="2730" top="2040" width="100" height="100">
    </BOUNDS>
    <PIN pinname="ID in ParentPatch" visible="1">
+   </PIN>
+   <PIN pinname="Instance index" visible="1">
    </PIN>
    </NODE>
    <NODE id="34" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
@@ -552,8 +554,6 @@
    </LINK>
    <LINK srcnodeid="37" srcpinname="ID in ParentPatch" dstnodeid="38" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="39" dstpinname="Input 3">
-   </LINK>
    <LINK srcnodeid="39" srcpinname="Output" dstnodeid="40" dstpinname="To">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="31" systemname="IOBox (String)">
@@ -582,4 +582,84 @@
    </PACK>
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
+   <NODE systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden" id="43">
+   <BOUNDS type="Node" left="11565" top="3180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="ID in ParentPatch" visible="1">
+   </PIN>
+   <PIN pinname="Query Save" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="42" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="12915" top="4365" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12915" top="4365" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="43" srcpinname="ID in ParentPatch" dstnodeid="42" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="PatchAlias (VVVV)" nodename="PatchAlias (VVVV)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="10950" top="1410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Patch" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="GetPatch (VVVV)" id="45" systemname="GetPatch (VVVV)">
+   <BOUNDS type="Node" left="11415" top="2295" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Patch" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Patch Description" visible="1">
+   </PIN>
+   <PIN pinname="Selected Node IDs" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="46" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11670" top="4095" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11670" top="4095" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="45" srcpinname="Selected Node IDs" dstnodeid="46" dstpinname="Y Input Value">
+   </LINK>
+   <NODE id="51" systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden">
+   <BOUNDS type="Node" left="3270" top="2625" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (MinInt .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Instance index" dstnodeid="51" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="52">
+   <BOUNDS type="Node" left="3375" top="3390" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="52" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Output" dstnodeid="52" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="39" dstpinname="Input 3">
+   </LINK>
    </PATCH>
