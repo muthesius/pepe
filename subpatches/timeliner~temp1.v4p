@@ -1,0 +1,189 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\timeliner.v4p" systemname="timeliner" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\timeliner.v4p" scrollx="3555" scrolly="2160">
+   <BOUNDS type="Window" left="14400" top="0" width="14400" height="15750">
+   </BOUNDS>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
+   <BOUNDS type="Node" left="19215" top="12855" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Maximum forground fps" slicecount="1" values="120">
+   </PIN>
+   <PIN pinname="Increase Timing Precision" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Time Mode" slicecount="1" values="Raw">
+   </PIN>
+   <PIN pinname="Maximum background fpsS" slicecount="1" values="30">
+   </PIN>
+   </NODE>
+   <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="19110" top="11325" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="19140" top="11925" width="2325" height="420">
+   </BOUNDS>
+   <BOUNDS type="Node" left="19140" top="11925" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="frames per second" dstnodeid="1" dstpinname="Y Input Value">
+   </LINK>
+   <NODE id="53" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="2340" top="6540" width="6375" height="7515">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2340" top="6540" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="49">
+   <BOUNDS type="Node" left="9135" top="16920" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9135" top="16920" width="11385" height="8475">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="bulider" filename="bulider.v4p" componentmode="Hidden" id="50" nodename="bulider.v4p">
+   <BOUNDS type="Node" left="9120" top="15735" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9120" top="15735" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10575" top="6270" width="17325" height="8730">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="50" srcpinname="Output" dstnodeid="49" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="119" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13755" top="990" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13755" top="990" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Y Input Value|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="FlipFlop (Animation)" nodename="FlipFlop (Animation)" componentmode="Hidden" id="120">
+   <BOUNDS type="Node" left="10125" top="2715" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="119" srcpinname="Y Output Value" dstnodeid="120" dstpinname="Set">
+   </LINK>
+   <NODE systemname="timelineValve" filename="timelineValve.v4p" nodename="timelineValve.v4p" componentmode="Hidden" id="136">
+   <BOUNDS type="Node" left="9657" top="5307" width="3810" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5967" top="810" width="7380" height="9285">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="7380" height="9285">
+   </BOUNDS>
+   <PIN pinname="Rendering" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="119" srcpinname="Y Output Value" dstnodeid="136" dstpinname="Render">
+   </LINK>
+   <LINK srcnodeid="136" srcpinname="Overflow" dstnodeid="120" dstpinname="Reset">
+   <LINKPOINT x="12465" y="5535">
+   </LINKPOINT>
+   <LINKPOINT x="11520" y="2205">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="timelineToTable" filename="timelineToTable.v4p" nodename="timelineToTable.v4p" componentmode="Hidden" id="180">
+   <BOUNDS type="Node" left="12272" top="6334" width="1350" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6822" top="877" width="10900" height="10915">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="10900" height="10915">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="136" srcpinname="Rendering" dstnodeid="180" dstpinname="Input - Input 1">
+   </LINK>
+   <LINK srcnodeid="136" srcpinname="Count" dstnodeid="180" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="tableToVar" filename="tableToVar.v4p" nodename="tableToVar.v4p" componentmode="Hidden" id="212">
+   <BOUNDS type="Node" left="10902" top="6326" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5697" top="1766" width="10410" height="9120">
+   </BOUNDS>
+   <BOUNDS type="Window" left="15585" top="5475" width="10410" height="9120">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="136" srcpinname="Count" dstnodeid="212" dstpinname=".. To [ - Select">
+   </LINK>
+   <NODE id="213" systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="8955" top="14610" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="From" slicecount="1" visible="1" values="{{LINES}}">
+   </PIN>
+   <PIN pinname="To" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="212" srcpinname="Output" dstnodeid="213" dstpinname="To">
+   </LINK>
+   <NODE id="214" systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="9000" top="13710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="|VAVA.PRESETUP&cr;&lf;long previousMillis = 0;        &cr;&lf;long interval = 10;&cr;&lf;int intervalCounter = -1;&cr;&lf;&cr;&lf;#include &lt;avr/pgmspace.h&gt;&cr;&lf;&cr;&lf;{{Table}}&cr;&lf;&cr;&lf;VAVA.SCRIPT&cr;&lf;&cr;&lf;  unsigned long currentMillis = millis();&cr;&lf;&cr;&lf; &cr;&lf;  if(currentMillis - previousMillis &gt; interval) {&cr;&lf;    previousMillis = currentMillis;   &cr;&lf;    intervalCounter++;&cr;&lf;    &cr;&lf;    if(1800 &lt;= intervalCounter){&cr;&lf;     intervalCounter = 0;&cr;&lf;    }&cr;&lf;}&cr;&lf;    &cr;&lf;unsigned int Timeline00= pgm_read_byte_near(Table00 + intervalCounter);&cr;&lf;unsigned int Timeline01= pgm_read_byte_near(Table01 + intervalCounter);&cr;&lf;&cr;&lf;VAVA&cr;&lf;|">
+   </PIN>
+   <PIN pinname="From" slicecount="1" visible="1" values="{{Table}}">
+   </PIN>
+   <PIN pinname="To" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="180" srcpinname="Output" dstnodeid="214" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="Output String" dstnodeid="214" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="214" srcpinname="Output" dstnodeid="213" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="213" srcpinname="Output" dstnodeid="50" dstpinname="Input">
+   </LINK>
+   </PATCH>

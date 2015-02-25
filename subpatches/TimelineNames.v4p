@@ -1,0 +1,121 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\TimelineNames.v4p" systemname="TimelineNames" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\TimelineNames.v4p">
+   <NODE id="0" systemname="Pad (String)" nodename="Pad (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2925" top="4635" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Padding" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Align" slicecount="1" values="Right">
+   </PIN>
+   </NODE>
+   <NODE id="1" systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2925" top="4095" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Default" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (MinInt .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="2" systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2925" top="3600" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname=".. To [" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="3" systemname="Select (String)" nodename="Select (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="1515" top="3585" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="4" systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden">
+   <BOUNDS type="Node" left="3135" top="2820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="5" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="1515" top="1500" width="975" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1515" top="1500" width="3945" height="495">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="pepeTimelineXX">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="1500" top="5130" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" values="XX">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="6" dstpinname="To">
+   </LINK>
+   <NODE id="7" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="5730" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="5730" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="7" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="3" dstpinname="Input" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Count" dstnodeid="3" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="1" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Count" dstnodeid="2" dstpinname=".. To [">
+   </LINK>
+   <NODE id="8" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <BOUNDS type="Box" left="3135" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3135" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Input">
+   </LINK>
+   <BOUNDS type="Window" left="-1" top="-1" width="4735" height="6730">
+   </BOUNDS>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   </PATCH>

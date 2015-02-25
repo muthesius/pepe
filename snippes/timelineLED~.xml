@@ -170,24 +170,26 @@
    </LINK>
    <LINK srcnodeid="18" srcpinname="Output" dstnodeid="14" dstpinname="Input">
    </LINK>
-   <NODE systemname="timeline (Enumerations Dynamic)" filename="plugins\DynamicEnumerationstimeline\DynamicEnumerationstimeline.csproj" nodename="timeline (Enumerations Dynamic)" componentmode="Hidden" id="27">
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="28" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="6495" top="855" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6495" top="855" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="value_LINE_00">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   </NODE>
+   <NODE systemname="Timeline (Enumerations Dynamic)" filename="..\subpatches\plugins\DynamicEnumerationstimeline\DynamicEnumerationstimeline.csproj" nodename="Timeline (Enumerations Dynamic)" componentmode="Hidden" id="27">
    <BOUNDS type="Node" left="6885" top="2580" width="100" height="100">
    </BOUNDS>
    <PIN pinname="UpdateEnum" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Enum Entries" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Input" slicecount="1" visible="1" values="value_LINE_00">
+   <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Name" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="28" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="6915" top="870" width="1590" height="270">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6915" top="870" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="value_LINE_00">
    </PIN>
    </NODE>
    <LINK srcnodeid="28" srcpinname="Output Enum" dstnodeid="27" dstpinname="Input">

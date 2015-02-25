@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\Pepe.v4p" scrollx="3615" scrolly="5625" systemname="Pepe" filename="C:\Users\jjh\OneDrive\Projekte\pepe\Pepe.v4p">
-   <BOUNDS type="Window" left="3240" top="0" width="15885" height="15750">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\Pepe.v4p" scrollx="3270" scrolly="5490" systemname="Pepe" filename="C:\Users\jjh\OneDrive\Projekte\pepe\Pepe.v4p">
+   <BOUNDS type="Window" left="0" top="0" width="14400" height="15750">
    </BOUNDS>
    <PACK Name="Image" Version="0.2.0">
    </PACK>
@@ -17,45 +17,115 @@
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE systemname="noteToText" filename="subpatches\noteToText.v4p" nodename="..\subpatches\noteToText.v4p" componentmode="Hidden" id="140">
-   <BOUNDS type="Node" left="7005" top="13290" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7005" top="13290" width="12405" height="7305">
-   </BOUNDS>
-   <BOUNDS type="Window" left="7275" top="405" width="21525" height="15750">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|int Digital_06 = 6;&cr;&lf;int Digital_10 = 10;&cr;&lf;int Digital_12 = 12;&cr;&lf;&cr;&lf;&cr;&lf;long previousMillis = 0;&cr;&lf;        &cr;&lf;long interval = 10;&cr;&lf;&cr;&lf;int intervalCounter = -1;&cr;&lf;&cr;&lf;&cr;&lf;#include &lt;avr/pgmspace.h&gt;;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;void setup(){&cr;&lf;&cr;&lf;pinMode(Digital_12,INPUT_PULLUP);&cr;&lf;pinMode(Digital_10,INPUT_PULLUP);&cr;&lf;pinMode(Digital_06, OUTPUT);&cr;&lf;pinMode(Digital_12,INPUT_PULLUP);&cr;&lf;}&cr;&lf;void loop() {&cr;&lf;&cr;&lf;int sensorVal_NodeID2Digital_12 = digitalRead(Digital_12);&cr;&lf;int sensorVal_NodeID2Digital_10 = digitalRead(Digital_10);&cr;&lf;&cr;&lf;int sensorVal_NodeID45Digital_12 = digitalRead(Digital_12);&cr;&lf;unsigned long currentMillis = millis();&cr;&lf;&cr;&lf; &cr;&lf;  if(currentMillis - previousMillis &gt; interval) {&cr;&lf;    previousMillis = currentMillis;   &cr;&lf;    intervalCounter++;&cr;&lf;    &cr;&lf;    if(1800 &lt;= intervalCounter){&cr;&lf;     intervalCounter = 0;&cr;&lf;    }&cr;&lf;}&cr;&lf;    &cr;&lf;unsigned int value_LINE_00  = pgm_read_byte_near(timeline_00 + intervalCounter);&cr;&lf;unsigned int value_LINE_01  = pgm_read_byte_near(timeline_01 + intervalCounter);&cr;&lf;unsigned int value_LINE_02  = pgm_read_byte_near(timeline_02 + intervalCounter);&cr;&lf;if(300 &lt;= intervalCounter &amp;&amp; intervalCounter &lt;= 500){&lf;&cr;if (sensorVal_NodeID2Digital_12 == LOW) {&cr;&lf;        intervalCounter = 0;&cr;&lf;  }&cr;&lf;}&cr;&lf;if (sensorVal_NodeID2Digital_10 == LOW) {&cr;&lf;        intervalCounter = 0;&cr;&lf;  }&cr;&lf;analogWrite(Digital_06, value_LINE_00);&cr;&lf;if (sensorVal_NodeID45Digital_12 == LOW) {&cr;&lf;        previousMillis = currentMillis;&cr;&lf;  }&cr;&lf;}&cr;&lf;|">
    </PIN>
    </NODE>
    <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="176">
    <BOUNDS type="Node" left="7020" top="11910" width="10425" height="270">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="|VAVA.PRESETUP&cr;long previousMillis = 0;&cr;&lf;        &cr;&lf;long interval = 10;&cr;&lf;&cr;&lf;int intervalCounter = -1;&cr;&lf;&cr;&lf;&cr;&lf;#include &lt;avr/pgmspace.h&gt;&cr;&lf;&cr;&lf;PROGMEM  prog_uchar timeline_00[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,7,7,7,7,7,7,7,8,8,8,8,8,8,9,9,9,9,9,9,10,10,10,10,10,11,11,11,11,11,11,12,12,12,12,12,13,13,13,13,13,14,14,14,14,14,15,15,15,15,15,16,16,16,16,16,17,17,17,17,18,18,18,18,18,19,19,19,19,20,20,20,20,21,21,21,21,21,22,22,22,22,23,23,23,23,24,24,24,24,25,25,25,25,26,26,26,26,27,27,27,27,28,28,28,28,29,29,29,30,30,30,30,31,31,31,31,32,32,32,33,33,33,33,34,34,34,34,35,35,35,36,36,36,36,37,37,37,38,38,38,38,39,39,39,40,40,40,40,41,41,41,42,42,42,42,43,43,43,44,44,44,45,45,45,45,46,46,46,47,47,47,47,48,48,48,49,49,49,50,50,50,50,51,51,51,52,52,52,53,53,53,54,54,54,54,55,55,55,56,56,56,57,57,57,58,58,58,58,59,59,59,60,60,60,61,61,61,61,62,62,62,63,63,63,64,64,64,65,65,65,66,66,66,66,67,67,67,68,68,68,69,69,69,69,70,70,70,71,71,71,72,72,72,73,73,73,73,74,74,74,75,75,75,76,76,76,76,77,77,77,78,78,78,79,79,79,79,80,80,80,81,81,81,82,82,82,82,83,83,83,84,84,84,85,85,85,85,86,86,86,87,87,87,87,88,88,88,89,89,89,89,90,90,90,91,91,91,91,92,92,92,92,93,93,93,94,94,94,94,95,95,95,95,96,96,96,97,97,97,97,98,98,98,98,99,99,99,99,100,100,100,100,101,101,101,101,102,102,102,102,103,103,103,103,104,104,104,104,105,105,105,105,106,106,106,106,106,107,107,107,107,108,108,108,108,109,109,109,109,109,110,110,110,110,110,111,111,111,111,112,112,112,112,112,113,113,113,113,113,114,114,114,114,114,114,115,115,115,115,115,116,116,116,116,116,116,117,117,117,117,117,117,118,118,118,118,118,118,119,119,119,119,119,119,120,120,120,120,120,120,120,120,121,121,121,121,121,121,121,122,122,122,122,122,122,122,122,122,123,123,123,123,123,123,123,123,123,124,124,124,124,124,124,124,124,124,124,124,124,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,126,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,124,124,124,124,124,124,124,124,124,124,124,124,124,123,123,123,123,123,123,123,123,123,123,123,123,123,122,122,122,122,122,122,122,122,122,122,122,121,121,121,121,121,121,121,121,121,121,121,120,120,120,120,120,120,120,120,120,120,119,119,119,119,119,119,119,119,119,118,118,118,118,118,118,118,118,118,118,117,117,117,117,117,117,117,117,116,116,116,116,116,116,116,116,116,115,115,115,115,115,115,115,115,114,114,114,114,114,114,114,114,113,113,113,113,113,113,113,113,112,112,112,112,112,112,112,111,111,111,111,111,111,111,111,110,110,110,110,110,110,110,109,109,109,109,109,109,109,108,108,108,108,108,108,108,107,107,107,107,107,107,106,106,106,106,106,106,106,105,105,105,105,105,105,105,104,104,104,104,104,104,103,103,103,103,103,103,103,102,102,102,102,102,102,101,101,101,101,101,101,100,100,100,100,100,100,99,99,99,99,99,99,98,98,98,98,98,98,97,97,97,97,97,97,96,96,96,96,96,96,95,95,95,95,95,95,94,94,94,94,94,94,93,93,93,93,93,93,92,92,92,92,92,91,91,91,91,91,91,90,90,90,90,90,90,89,89,89,89,89,88,88,88,88,88,88,87,87,87,87,87,86,86,86,86,86,86,85,85,85,85,85,84,84,84,84,84,84,83,83,83,83,83,82,82,82,82,82,81,81,81,81,81,81,80,80,80,80,80,79,79,79,79,79,78,78,78,78,78,78,77,77,77,77,77,76,76,76,76,76,75,75,75,75,75,75,74,74,74,74,74,73,73,73,73,73,72,72,72,72,72,71,71,71,71,71,70,70,70,70,70,70,69,69,69,69,69,68,68,68,68,68,67,67,67,67,67,66,66,66,66,66,65,65,65,65,65,65,64,64,64,64,64,63,63,63,63,63,62,62,62,62,62,61,61,61,61,61,60,60,60,60,60,60,59,59,59,59,59,58,58,58,58,58,57,57,57,57,57,56,56,56,56,56,55,55,55,55,55,55,54,54,54,54,54,53,53,53,53,53,52,52,52,52,52,51,51,51,51,51,51,50,50,50,50,50,49,49,49,49,49,48,48,48,48,48,48,47,47,47,47,47,46,46,46,46,46,45,45,45,45,45,45,44,44,44,44,44,43,43,43,43,43,43,42,42,42,42,42,41,41,41,41,41,41,40,40,40,40,40,39,39,39,39,39,39,38,38,38,38,38,37,37,37,37,37,37,36,36,36,36,36,36,35,35,35,35,35,35,34,34,34,34,34,33,33,33,33,33,33,32,32,32,32,32,32,31,31,31,31,31,31,30,30,30,30,30,30,29,29,29,29,29,29,28,28,28,28,28,28,27,27,27,27,27,27,27,26,26,26,26,26,26,25,25,25,25,25,25,24,24,24,24,24,24,24,23,23,23,23,23,23,22,22,22,22,22,22,22,21,21,21,21,21,21,21,20,20,20,20,20,20,20,19,19,19,19,19,19,19,18,18,18,18,18,18,18,17,17,17,17,17,17,17,16,16,16,16,16,16,16,16,15,15,15,15,15,15,15,15,14,14,14,14,14,14,14,14,13,13,13,13,13,13,13,13,12,12,12,12,12,12,12,12,11,11,11,11,11,11,11,11,11,10,10,10,10,10,10,10,10,10,9,9,9,9,9,9,9,9,9,9,8,8,8,8,8,8,8,8,8,8,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2};&cr;&lf;PROGMEM  prog_uchar timeline_01[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};&cr;&lf;PROGMEM  prog_uchar timeline_02[] = {120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120};&cr;&lf;VAVA.SETUP&cr;&cr;&lf;VAVA.VARIABLE &cr;&cr;&lf;VAVA.SCRIPT&cr;unsigned long currentMillis = millis();&cr;&lf;&cr;&lf; &cr;&lf;  if(currentMillis - previousMillis &gt; interval) {&cr;&lf;    previousMillis = currentMillis;   &cr;&lf;    intervalCounter++;&cr;&lf;    &cr;&lf;    if(1800 &lt;= intervalCounter){&cr;&lf;     intervalCounter = 0;&cr;&lf;    }&cr;&lf;}&cr;&lf;    &cr;&lf;unsigned int value_LINE_00  = pgm_read_byte_near(timeline_00 + intervalCounter);&cr;&lf;unsigned int value_LINE_01  = pgm_read_byte_near(timeline_01 + intervalCounter);&cr;&lf;unsigned int value_LINE_02  = pgm_read_byte_near(timeline_02 + intervalCounter);&cr;VAVA|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="|VAVA.PRESETUP&cr;&cr;&lf;VAVA.SETUP&cr;pinMode(Digital_12,INPUT_PULLUP);&cr;&lf;VAVA.VARIABLE &cr;int sensorVal_NodeID2Digital_12 = digitalRead(Digital_12);&cr;&lf;VAVA.SCRIPTif(300 &lt;= intervalCounter &amp;&amp; intervalCounter &lt;= 500){&lf;&cr;if (sensorVal_NodeID2Digital_12 == LOW) {&cr;&lf;        intervalCounter = 0;&cr;&lf;  }&cr;&lf;}VAVA|">
    </PIN>
    <BOUNDS type="Box" left="7020" top="11910">
    </BOUNDS>
    <PIN pinname="Input Count" slicecount="1" values="5">
    </PIN>
-   <PIN pinname="Input 3" visible="1" slicecount="1" values="|VAVA.SETUP&cr;pinMode(Digital_10,INPUT_PULLUP);&cr;&lf;pinMode(Digital_03, OUTPUT);&cr;&lf;VAVA.VARIABLE &cr;int sensorVal_NodeID170Digital_10 = digitalRead(Digital_10);&cr;&lf;VAVA.SCRIPTif(300 &lt;= intervalCounter &amp;&amp; intervalCounter &lt;= 500){&lf;&cr;if (sensorVal_NodeID170Digital_10 == HIGH) {&cr;&lf;//OFFSTATE&cr;&lf;    digitalWrite(Digital_03, LOW);&cr;&lf;  } &cr;&lf;  else {&cr;&lf;    digitalWrite(Digital_03, HIGH);&cr;&lf;  }&cr;&lf;}VAVA|">
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="|VAVA.PRESETUP&cr;&cr;&lf;VAVA.SETUP&cr;pinMode(Digital_10,INPUT_PULLUP);&cr;&lf;VAVA.VARIABLE &cr;int sensorVal_NodeID2Digital_10 = digitalRead(Digital_10);&cr;&lf;VAVA.SCRIPT&cr;if (sensorVal_NodeID2Digital_10 == LOW) {&cr;&lf;        intervalCounter = 0;&cr;&lf;  }&cr;VAVA|">
    </PIN>
-   <PIN pinname="Input 4" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input 4" visible="1" slicecount="1" values="|VAVA.PRESETUP&cr;&cr;&lf;VAVA.SETUP&cr;pinMode(Digital_06, OUTPUT);&cr;&lf;VAVA.VARIABLE &cr;&cr;&lf;VAVA.SCRIPT&cr;analogWrite(Digital_06, value_LINE_00);&cr;VAVA|">
    </PIN>
-   <PIN pinname="Input 5" visible="1">
+   <PIN pinname="Input 5" visible="1" slicecount="1" values="|VAVA.PRESETUP&cr;&cr;&lf;VAVA.SETUP&cr;pinMode(Digital_12,INPUT_PULLUP);&cr;&lf;VAVA.VARIABLE &cr;int sensorVal_NodeID45Digital_12 = digitalRead(Digital_12);&cr;&lf;VAVA.SCRIPT&cr;if (sensorVal_NodeID45Digital_12 == LOW) {&cr;&lf;        previousMillis = currentMillis;&cr;&lf;  }&cr;VAVA|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="226" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="6870" top="6615" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6870" top="6615" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_10">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="227" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="7455" top="7095" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7455" top="7095" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_03">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="235" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="14955" top="5250" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14955" top="5250" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_12">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="239" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="14835" top="8355" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14835" top="8355" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Timeline02">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="240" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="15825" top="9045" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15825" top="9045" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_06">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="243" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="12285" top="4650" width="1575" height="420">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12285" top="4650" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_10">
+   </PIN>
+   </NODE>
+   <NODE systemname="FromTo" filename="snippes\FromTo.v4p" componentmode="Hidden" id="230" nodename="snippes\FromTo.v4p">
+   <BOUNDS type="Node" left="6855" top="8355" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6855" top="8355" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13845" top="1875" width="13590" height="13530">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" values="300">
+   </PIN>
+   <PIN pinname="To" slicecount="1" values="500">
+   </PIN>
+   </NODE>
+   <NODE systemname="FromTo" filename="snippes\FromTo.v4p" componentmode="Hidden" id="233" nodename="snippes\FromTo.v4p">
+   <BOUNDS type="Node" left="9720" top="6345" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9720" top="6345" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13845" top="1875" width="13590" height="13530">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" values="300">
    </PIN>
    </NODE>
    <NODE systemname="Light" filename="snippes\Light.v4p" nodename="snippes\Light.v4p" componentmode="Hidden" id="225">
-   <BOUNDS type="Node" left="6750" top="7920" width="0" height="0">
+   <BOUNDS type="Node" left="6870" top="7725" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6750" top="7920" width="8310" height="7800">
+   <BOUNDS type="Box" left="6870" top="7725" width="8310" height="7800">
    </BOUNDS>
    <BOUNDS type="Window" left="9495" top="765" width="18735" height="13710">
    </BOUNDS>
@@ -65,143 +135,35 @@
    </PIN>
    <PIN pinname="Light" visible="1">
    </PIN>
-   <PIN pinname="Button" slicecount="1" visible="1" values="Digital_02">
+   <PIN pinname="Button" visible="1">
    </PIN>
-   <PIN pinname="Outpin" visible="1" slicecount="1" values="Digital_05">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="226" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="6750" top="6810" width="1590" height="270">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6750" top="6810" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_10">
+   <PIN pinname="Outpin" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="226" srcpinname="Output Enum" dstnodeid="225" dstpinname="Button">
    </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="227" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="7335" top="7290" width="1590" height="270">
-   </BOUNDS>
-   <BOUNDS type="Node" left="7335" top="7290" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_03">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="227" srcpinname="Output Enum" dstnodeid="225" dstpinname="Outpin">
    </LINK>
-   <NODE systemname="PlayPause" filename="snippes\PlayPause.v4p" componentmode="Hidden" id="232" nodename="..\snippes\PlayPause.v4p">
-   <BOUNDS type="Node" left="17295" top="10590" width="100" height="100">
+   <LINK srcnodeid="225" srcpinname="Output" dstnodeid="230" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="PlayPause" filename="snippes\PlayPause.v4p" componentmode="Hidden" id="232" nodename="snippes\PlayPause.v4p">
+   <BOUNDS type="Node" left="14955" top="6195" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="17295" top="10590" width="4800" height="3600">
+   <BOUNDS type="Box" left="14955" top="6195" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="10545" top="2010" width="18255" height="11715">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 1" slicecount="1" visible="1" values="Digital_02">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="235" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="17295" top="9645" width="1590" height="270">
-   </BOUNDS>
-   <BOUNDS type="Node" left="17295" top="9645" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_12">
-   </PIN>
-   <PIN pinname="Output Enum" visible="1">
+   <PIN pinname="Input 1" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="235" srcpinname="Output Enum" dstnodeid="232" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="timeliner" filename="subpatches\timeliner.v4p" componentmode="Hidden" id="236" nodename="subpatches\timeliner.v4p">
-   <BOUNDS type="Node" left="7050" top="10620" width="100" height="100">
+   <NODE systemname="goto" filename="snippes\goto.v4p" componentmode="Hidden" id="241" nodename="snippes\goto.v4p">
+   <BOUNDS type="Node" left="9720" top="5445" width="1455" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="7050" top="10620" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="14445" top="0" width="14355" height="15750">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="140" srcpinname="Output" dstnodeid="139" dstpinname="Input String">
-   </LINK>
-   <NODE systemname="timelineLED" filename="snippes\timelineLED.v4p" componentmode="Hidden" id="237" nodename="..\snippes\timelineLED.v4p">
-   <BOUNDS type="Node" left="14790" top="10590" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="14790" top="10590" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="0" top="7200" width="14400" height="8550">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1" slicecount="1" values="Digital_06">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="value_LINE_00">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="237" srcpinname="Output" dstnodeid="176" dstpinname="Input 4">
-   </LINK>
-   <LINK srcnodeid="236" srcpinname="Output" dstnodeid="176" dstpinname="Input 1">
-   </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="239" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="14835" top="8355" width="1590" height="270">
-   </BOUNDS>
-   <BOUNDS type="Node" left="14835" top="8355" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="value_LINE_00">
-   </PIN>
-   <PIN pinname="Output Enum" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="239" srcpinname="Output Enum" dstnodeid="237" dstpinname="Input">
-   </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="240" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="15825" top="9045" width="1590" height="270">
-   </BOUNDS>
-   <BOUNDS type="Node" left="15825" top="9045" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_06">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="240" srcpinname="Output Enum" dstnodeid="237" dstpinname="Output">
-   </LINK>
-   <LINK srcnodeid="176" srcpinname="Output" dstnodeid="140" dstpinname="Input">
-   </LINK>
-   <NODE systemname="FromTo" filename="snippes\FromTo.v4p" componentmode="Hidden" id="230" nodename="..\snippes\FromTo.v4p">
-   <BOUNDS type="Node" left="6735" top="8550" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6735" top="8550" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="13845" top="1875" width="13590" height="13530">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="1">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   <PIN pinname="From" slicecount="1" values="300">
-   </PIN>
-   <PIN pinname="To" slicecount="1" values="500">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="225" srcpinname="Output" dstnodeid="230" dstpinname="Input String">
-   </LINK>
-   <NODE systemname="FromTo" filename="snippes\FromTo.v4p" componentmode="Hidden" id="233" nodename="..\snippes\FromTo.v4p">
-   <BOUNDS type="Node" left="9600" top="10515" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="9600" top="10515" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="13845" top="1875" width="13590" height="13530">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="1">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   <PIN pinname="From" slicecount="1" values="500">
-   </PIN>
-   </NODE>
-   <NODE systemname="goto" filename="snippes\goto.v4p" componentmode="Hidden" id="241" nodename="..\snippes\goto.v4p">
-   <BOUNDS type="Node" left="9600" top="9615" width="1455" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="9600" top="9615" width="4800" height="3600">
+   <BOUNDS type="Box" left="9720" top="5445" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="11310" top="2670" width="13290" height="10440">
    </BOUNDS>
@@ -212,32 +174,170 @@
    </NODE>
    <LINK srcnodeid="241" srcpinname="Output" dstnodeid="233" dstpinname="Input String">
    </LINK>
-   <LINK srcnodeid="233" srcpinname="Output String" dstnodeid="176" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="232" srcpinname="Output" dstnodeid="176" dstpinname="Input 5">
-   </LINK>
-   <NODE systemname="goto" filename="snippes\goto.v4p" componentmode="Hidden" id="242" nodename="..\snippes\goto.v4p">
-   <BOUNDS type="Node" left="12210" top="10500" width="1455" height="270">
+   <NODE systemname="goto" filename="snippes\goto.v4p" componentmode="Hidden" id="242" nodename="snippes\goto.v4p">
+   <BOUNDS type="Node" left="12330" top="6330" width="1455" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="12210" top="10500" width="4800" height="3600">
+   <BOUNDS type="Box" left="12330" top="6330" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="11310" top="2670" width="13290" height="10440">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 1" slicecount="1" visible="1" values="Digital_12">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="242" srcpinname="Output" dstnodeid="176" dstpinname="Input 3">
-   </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="243" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="12165" top="8820" width="1575" height="420">
-   </BOUNDS>
-   <BOUNDS type="Node" left="12165" top="8820" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_10">
+   <PIN pinname="Input 1" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="243" srcpinname="Output Enum" dstnodeid="242" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="timelineLED" filename="snippes\timelineLED.v4p" componentmode="Hidden" id="237" nodename="snippes\timelineLED.v4p">
+   <BOUNDS type="Node" left="14790" top="10590" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14790" top="10590" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="7200" width="14400" height="8550">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="237" srcpinname="Output" dstnodeid="176" dstpinname="Input 4">
+   </LINK>
+   <LINK srcnodeid="239" srcpinname="Output Enum" dstnodeid="237" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="240" srcpinname="Output Enum" dstnodeid="237" dstpinname="Output">
+   </LINK>
+   <NODE systemname="noteToText" filename="subpatches\noteToText.v4p" nodename="subpatches\noteToText.v4p" componentmode="Hidden" id="140">
+   <BOUNDS type="Node" left="7005" top="13290" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7005" top="13290" width="12405" height="7305">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7275" top="405" width="21525" height="15750">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="140" srcpinname="Output" dstnodeid="139" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="Output" dstnodeid="140" dstpinname="Input">
+   </LINK>
+   <NODE systemname="timeliner" filename="subpatches\timeliner.v4p" nodename="subpatches\timeliner.v4p" componentmode="Hidden" id="244">
+   <BOUNDS type="Node" left="6990" top="10515" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="19455" top="0" width="9345" height="15750">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="244" srcpinname="Output" dstnodeid="176" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="247" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="11940" top="8250" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11940" top="8250" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Timeline01">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="246" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="12930" top="8940" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12930" top="8940" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_05">
+   </PIN>
+   </NODE>
+   <NODE systemname="timelineLED" filename="snippes\timelineLED.v4p" componentmode="Hidden" id="245" nodename="snippes\timelineLED.v4p">
+   <BOUNDS type="Node" left="11895" top="10485" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11895" top="10485" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="7200" width="14400" height="8550">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="247" srcpinname="Output Enum" dstnodeid="245" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="246" srcpinname="Output Enum" dstnodeid="245" dstpinname="Output">
+   </LINK>
+   <LINK srcnodeid="245" srcpinname="Output" dstnodeid="176" dstpinname="Input 3">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="250" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="9435" top="8325" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9435" top="8325" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Timeline00">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="249" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="10425" top="9015" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10425" top="9015" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_03">
+   </PIN>
+   </NODE>
+   <NODE systemname="timelineLED" filename="snippes\timelineLED.v4p" componentmode="Hidden" id="248" nodename="snippes\timelineLED.v4p">
+   <BOUNDS type="Node" left="9390" top="10560" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9390" top="10560" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="7200" width="14400" height="8550">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="250" srcpinname="Output Enum" dstnodeid="248" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="249" srcpinname="Output Enum" dstnodeid="248" dstpinname="Output">
+   </LINK>
+   <LINK srcnodeid="248" srcpinname="Output" dstnodeid="176" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="253" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="17865" top="8265" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="17865" top="8265" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Timeline03">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="252" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="18855" top="8955" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="18855" top="8955" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_09">
+   </PIN>
+   </NODE>
+   <NODE systemname="timelineLED" filename="snippes\timelineLED.v4p" componentmode="Hidden" id="251" nodename="snippes\timelineLED.v4p">
+   <BOUNDS type="Node" left="17820" top="10500" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="17820" top="10500" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="7200" width="14400" height="8550">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="253" srcpinname="Output Enum" dstnodeid="251" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="252" srcpinname="Output Enum" dstnodeid="251" dstpinname="Output">
+   </LINK>
+   <LINK srcnodeid="251" srcpinname="Output" dstnodeid="176" dstpinname="Input 5">
    </LINK>
    </PATCH>

@@ -12,7 +12,7 @@ using VVVV.Core.Logging;
 #endregion usings
 
 namespace VVVV.Nodes
-{
+{ 
 	#region PluginInfo
 	[PluginInfo(Name = "Timeline", Category = "Enumerations", Version = "Dynamic", Help = "Basic template with dynamic custom enumeration", Tags = "")]
 	#endregion PluginInfo
@@ -43,7 +43,7 @@ namespace VVVV.Nodes
 		public DynamicEnumerationsTimelineNode()
 		{
 			var s = new string[] {
-				"value_LINE_00"
+				"Timeline00"
 			};
 			//Please rename your Enum Type to avoid 
 			//numerous "MyDynamicEnum"s in the system
