@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\uni\pepe\pepe\subs\mixer.v4p" systemname="mixer" filename="C:\uni\pepe\pepe\subs\mixer.v4p" scrollx="0" scrolly="3600">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subs\mixer.v4p" systemname="mixer" filename="C:\uni\pepe\pepe\subs\mixer.v4p" scrollx="7215" scrolly="2280">
    <BOUNDS type="Window" left="0" top="2715" width="12495" height="15750">
    </BOUNDS>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="9">
@@ -189,5 +189,7 @@
    <LINK srcnodeid="49" srcpinname="Output String" dstnodeid="40" dstpinname="Input 2">
    </LINK>
    <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <PACK Name="Image" Version="0.2.0">
    </PACK>
    </PATCH>

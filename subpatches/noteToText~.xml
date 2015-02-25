@@ -1,7 +1,7 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\noteToText.v4p" systemname="noteToText" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\noteToText.v4p" scrollx="0" scrolly="1920">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\noteToText.v4p" systemname="noteToText" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\noteToText.v4p" scrollx="0" scrolly="0">
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="5880" top="1500" width="100" height="100">
+   <BOUNDS type="Node" left="7200" top="1560" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -9,7 +9,7 @@
    </PIN>
    </NODE>
    <NODE systemname="RegExpr (String)" nodename="RegExpr (String)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="3000" top="2685" width="100" height="100">
+   <BOUNDS type="Node" left="4320" top="2745" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -21,7 +21,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Clean (String)" nodename="Clean (String)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="3000" top="3255" width="100" height="100">
+   <BOUNDS type="Node" left="4320" top="3315" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -29,7 +29,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="3015" top="3855" width="100" height="100">
+   <BOUNDS type="Node" left="4335" top="3915" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -39,7 +39,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="4">
-   <BOUNDS type="Node" left="2280" top="4770" width="100" height="100">
+   <BOUNDS type="Node" left="3600" top="4830" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -51,9 +51,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="5" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1500" top="2685" width="1380" height="1410">
+   <BOUNDS type="Box" left="2820" top="2745" width="1380" height="1410">
    </BOUNDS>
-   <BOUNDS type="Node" left="1500" top="2685" width="0" height="0">
+   <BOUNDS type="Node" left="2820" top="2745" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="|void setup(){&cr;&lf;vavaSETUP&cr;&lf;}|">
    </PIN>
@@ -67,7 +67,7 @@
    </PIN>
    </NODE>
    <NODE systemname="RegExpr (String)" nodename="RegExpr (String)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="5865" top="2685" width="100" height="100">
+   <BOUNDS type="Node" left="7185" top="2745" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -79,7 +79,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Clean (String)" nodename="Clean (String)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="5865" top="3210" width="100" height="100">
+   <BOUNDS type="Node" left="7185" top="3270" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -87,7 +87,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="8">
-   <BOUNDS type="Node" left="5865" top="4290" width="100" height="100">
+   <BOUNDS type="Node" left="7185" top="4350" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -97,7 +97,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="9">
-   <BOUNDS type="Node" left="5145" top="4770" width="100" height="100">
+   <BOUNDS type="Node" left="6465" top="4830" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -109,9 +109,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="10" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="4365" top="2685" width="1380" height="1410">
+   <BOUNDS type="Box" left="5685" top="2745" width="1380" height="1410">
    </BOUNDS>
-   <BOUNDS type="Node" left="4365" top="2685" width="0" height="0">
+   <BOUNDS type="Node" left="5685" top="2745" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="|void loop() {&cr;&lf;vavaLOOP&cr;&lf;}|">
    </PIN>
@@ -125,7 +125,7 @@
    </PIN>
    </NODE>
    <NODE systemname="RegExpr (String)" nodename="RegExpr (String)" componentmode="Hidden" id="11">
-   <BOUNDS type="Node" left="6795" top="2685" width="100" height="100">
+   <BOUNDS type="Node" left="8115" top="2745" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -137,7 +137,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Clean (String)" nodename="Clean (String)" componentmode="Hidden" id="12">
-   <BOUNDS type="Node" left="6795" top="3210" width="100" height="100">
+   <BOUNDS type="Node" left="8115" top="3270" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -145,7 +145,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Cons (String)" nodename="Cons (String)" componentmode="Hidden" id="13" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
-   <BOUNDS type="Node" left="5865" top="3810" width="990" height="270">
+   <BOUNDS type="Node" left="7185" top="3870" width="990" height="270">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -155,11 +155,11 @@
    </PIN>
    <PIN pinname="Intersperse">
    </PIN>
-   <BOUNDS type="Box" left="5865" top="3810">
+   <BOUNDS type="Box" left="7185" top="3870">
    </BOUNDS>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="2295" top="5535" width="8610" height="270">
+   <BOUNDS type="Node" left="3615" top="5595" width="8610" height="270">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -169,21 +169,23 @@
    </PIN>
    <PIN pinname="Intersperse" slicecount="1" values="CarriageReturnLineFeed">
    </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="4" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="3" srcpinname="Output" dstnodeid="4" dstpinname="To">
    </LINK>
-   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="14" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="14" dstpinname="Input 2">
-   </LINK>
    <NODE id="15" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
-   <BOUNDS type="Box" left="2130" top="13220" width="4290" height="6300">
+   <BOUNDS type="Box" left="3450" top="13280" width="4290" height="6300">
    </BOUNDS>
-   <BOUNDS type="Node" left="2130" top="13220" width="750" height="240">
+   <BOUNDS type="Node" left="3450" top="13280" width="750" height="240">
    </BOUNDS>
    <PIN pinname="Input String" visible="1">
    </PIN>
@@ -211,9 +213,9 @@
    <NODE id="16" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
-   <BOUNDS type="Box" left="5880" top="500" width="750" height="240">
+   <BOUNDS type="Box" left="7200" top="560" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5880" top="500" width="750" height="240">
+   <BOUNDS type="Node" left="7200" top="560" width="750" height="240">
    </BOUNDS>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -231,7 +233,7 @@
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
    <NODE systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="12555" top="6690" width="100" height="100">
+   <BOUNDS type="Node" left="13875" top="6750" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
@@ -245,13 +247,13 @@
    </PIN>
    <PIN pinname="Output Bins" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="12555" top="6690">
+   <BOUNDS type="Box" left="13875" top="6750">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="18" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="12750" top="5535" width="2985" height="240">
+   <BOUNDS type="Box" left="14070" top="5595" width="2985" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="12750" top="5535" width="0" height="0">
+   <BOUNDS type="Node" left="14070" top="5595" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="|(?!pinmode\()([A]||[0-9])\d(?=, *input)|">
    </PIN>
@@ -273,7 +275,7 @@
    <LINK srcnodeid="18" srcpinname="Output String" dstnodeid="19" dstpinname="Regular Expression">
    </LINK>
    <NODE systemname="OutputPepe (Enumerations Dynamic)" filename="plugins\DynamicEnumerationsOutputPepe\DynamicEnumerationsOutputPepe.csproj" nodename="OutputPepe (Enumerations Dynamic)" componentmode="Hidden" id="95">
-   <BOUNDS type="Node" left="15420" top="14025" width="100" height="100">
+   <BOUNDS type="Node" left="16740" top="14085" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="|Pin 09|">
    </PIN>
@@ -283,11 +285,11 @@
    </PIN>
    <PIN pinname="Name" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="15420" top="14025">
+   <BOUNDS type="Box" left="16740" top="14085">
    </BOUNDS>
    </NODE>
    <NODE systemname="InputPepe (Enumerations Dynamic)" filename="plugins\DynamicEnumerationsInputPepe\DynamicEnumerationsInputPepe.csproj" nodename="InputPepe (Enumerations Dynamic)" componentmode="Hidden" id="97">
-   <BOUNDS type="Node" left="12000" top="14175" width="100" height="100">
+   <BOUNDS type="Node" left="13320" top="14235" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Enum Entries" visible="1" slicecount="18" values="|Pin 00|,|Pin 01|,|Pin 02|,|Pin 03|,|Pin 04|">
    </PIN>
@@ -299,29 +301,29 @@
    </PIN>
    <PIN pinname="Index" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="12000" top="14175">
+   <BOUNDS type="Box" left="13320" top="14235">
    </BOUNDS>
    </NODE>
    <NODE systemname="DeleteSlice (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="DeleteSlice (String)" componentmode="Hidden" id="60">
-   <BOUNDS type="Node" left="15960" top="11595" width="100" height="100">
+   <BOUNDS type="Node" left="17280" top="11655" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Index" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="10" values="|Pin 00|,|Pin 01|,|Pin 02|,|Pin 03|,|Pin 04|,|Pin 05|,|Pin 06|,|Pin 07|,|Pin 08|,|Pin 09|">
    </PIN>
-   <BOUNDS type="Box" left="15960" top="11595">
+   <BOUNDS type="Box" left="17280" top="11655">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="DeleteSlice (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="DeleteSlice (String)" componentmode="Hidden" id="120">
-   <BOUNDS type="Node" left="12465" top="11595" width="100" height="100">
+   <BOUNDS type="Node" left="13785" top="11655" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Index" visible="1" slicecount="2" values="0">
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="10" values="|Pin 00|,|Pin 01|,|Pin 02|,|Pin 03|,|Pin 04|,|Pin 05|,|Pin 06|,|Pin 07|,|Pin 08|,|Pin 09|">
    </PIN>
-   <BOUNDS type="Box" left="12465" top="11595">
+   <BOUNDS type="Box" left="13785" top="11655">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -329,7 +331,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="121">
-   <BOUNDS type="Node" left="15960" top="12750" width="100" height="100">
+   <BOUNDS type="Node" left="17280" top="12810" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -339,7 +341,7 @@
    <LINK srcnodeid="60" srcpinname="Output" dstnodeid="121" dstpinname="Input">
    </LINK>
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="122">
-   <BOUNDS type="Node" left="15960" top="13170" width="100" height="100">
+   <BOUNDS type="Node" left="17280" top="13230" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -349,7 +351,7 @@
    <LINK srcnodeid="121" srcpinname="Output" dstnodeid="122" dstpinname="Input">
    </LINK>
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="124">
-   <BOUNDS type="Node" left="12465" top="12750" width="100" height="100">
+   <BOUNDS type="Node" left="13785" top="12810" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="text">
    </PIN>
@@ -357,7 +359,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="123">
-   <BOUNDS type="Node" left="12465" top="13170" width="100" height="100">
+   <BOUNDS type="Node" left="13785" top="13230" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -369,9 +371,9 @@
    <LINK srcnodeid="120" srcpinname="Output" dstnodeid="124" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="125" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="14865" top="11535" width="885" height="375">
+   <BOUNDS type="Box" left="16185" top="11595" width="885" height="375">
    </BOUNDS>
-   <BOUNDS type="Node" left="14865" top="11535" width="0" height="0">
+   <BOUNDS type="Node" left="16185" top="11595" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="42">
    </PIN>
@@ -379,9 +381,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="126" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="11325" top="12060" width="885" height="375">
+   <BOUNDS type="Box" left="12645" top="12120" width="885" height="375">
    </BOUNDS>
-   <BOUNDS type="Node" left="11325" top="12060" width="0" height="0">
+   <BOUNDS type="Node" left="12645" top="12120" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="42">
    </PIN>
@@ -389,9 +391,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="127" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="12000" top="15585" width="795" height="240">
+   <BOUNDS type="Box" left="13320" top="15645" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="12000" top="15585" width="0" height="0">
+   <BOUNDS type="Node" left="13320" top="15645" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -403,9 +405,9 @@
    <LINK srcnodeid="97" srcpinname="Name" dstnodeid="127" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="128" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="15450" top="15480" width="1620" height="420">
+   <BOUNDS type="Box" left="16770" top="15540" width="1620" height="420">
    </BOUNDS>
-   <BOUNDS type="Node" left="15450" top="15480" width="0" height="0">
+   <BOUNDS type="Node" left="16770" top="15540" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -417,7 +419,7 @@
    <LINK srcnodeid="95" srcpinname="Name" dstnodeid="128" dstpinname="Input String">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="129">
-   <BOUNDS type="Node" left="15960" top="13560" width="100" height="100">
+   <BOUNDS type="Node" left="17280" top="13620" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -431,7 +433,7 @@
    <LINK srcnodeid="129" srcpinname="Output" dstnodeid="95" dstpinname="UpdateEnum">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="130">
-   <BOUNDS type="Node" left="12465" top="13740" width="100" height="100">
+   <BOUNDS type="Node" left="13785" top="13800" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
@@ -449,7 +451,7 @@
    <LINK srcnodeid="126" srcpinname="Output Enum" dstnodeid="97" dstpinname="Input">
    </LINK>
    <NODE systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden" id="142">
-   <BOUNDS type="Node" left="16050" top="6690" width="100" height="100">
+   <BOUNDS type="Node" left="17370" top="6750" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
@@ -463,13 +465,13 @@
    </PIN>
    <PIN pinname="Output Bins" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="16050" top="6690">
+   <BOUNDS type="Box" left="17370" top="6750">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="143" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="16380" top="5505" width="3000" height="300">
+   <BOUNDS type="Box" left="17700" top="5565" width="3000" height="300">
    </BOUNDS>
-   <BOUNDS type="Node" left="16380" top="5505" width="0" height="0">
+   <BOUNDS type="Node" left="17700" top="5565" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="|(?!pinmode\()([A]||[0-9])\d(?=, *Output)|">
    </PIN>
@@ -485,7 +487,7 @@
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="142" dstpinname="Input">
    </LINK>
    <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="151">
-   <BOUNDS type="Node" left="16890" top="13170" width="100" height="100">
+   <BOUNDS type="Node" left="18210" top="13230" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Bang" visible="1">
    </PIN>
@@ -495,7 +497,7 @@
    <LINK srcnodeid="151" srcpinname="Bang" dstnodeid="129" dstpinname="Input 2">
    </LINK>
    <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="153">
-   <BOUNDS type="Node" left="13635" top="13125" width="100" height="100">
+   <BOUNDS type="Node" left="14955" top="13185" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Bang" visible="1">
    </PIN>
@@ -505,9 +507,9 @@
    <LINK srcnodeid="153" srcpinname="Bang" dstnodeid="130" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="167" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="19530" top="4815" width="3120" height="4860">
+   <BOUNDS type="Box" left="20850" top="4875" width="3120" height="4860">
    </BOUNDS>
-   <BOUNDS type="Node" left="19530" top="4815" width="0" height="0">
+   <BOUNDS type="Node" left="20850" top="4875" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -527,27 +529,27 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="167" srcpinname="Output String" dstnodeid="120" dstpinname="Input" linkstyle="VHV">
-   <LINKPOINT x="19560" y="9690">
+   <LINKPOINT x="20880" y="9750">
    </LINKPOINT>
-   <LINKPOINT x="12495" y="9690">
+   <LINKPOINT x="13815" y="9750">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="167" srcpinname="Output String" dstnodeid="60" dstpinname="Input" linkstyle="VHV">
-   <LINKPOINT x="19560" y="11280">
+   <LINKPOINT x="20880" y="11340">
    </LINKPOINT>
-   <LINKPOINT x="15990" y="11280">
+   <LINKPOINT x="17310" y="11340">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="120" srcpinname="Output" dstnodeid="97" dstpinname="Enum Entries">
-   <LINKPOINT x="13245" y="12300">
+   <LINKPOINT x="14565" y="12360">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="60" srcpinname="Output" dstnodeid="95" dstpinname="Enum Entries">
-   <LINKPOINT x="16710" y="12630">
+   <LINKPOINT x="18030" y="12690">
    </LINKPOINT>
    </LINK>
    <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="175">
-   <BOUNDS type="Node" left="13095" top="10725" width="100" height="100">
+   <BOUNDS type="Node" left="14415" top="10785" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filter" visible="1">
    </PIN>
@@ -561,27 +563,27 @@
    <LINK srcnodeid="142" srcpinname="Matches" dstnodeid="175" dstpinname="Filter">
    </LINK>
    <LINK srcnodeid="167" srcpinname="Output String" dstnodeid="175" dstpinname="Input" linkstyle="VHV">
-   <LINKPOINT x="19560" y="9900">
+   <LINKPOINT x="20880" y="9960">
    </LINKPOINT>
-   <LINKPOINT x="13125" y="9900">
+   <LINKPOINT x="14445" y="9960">
    </LINKPOINT>
    </LINK>
    <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="176">
-   <BOUNDS type="Node" left="16575" top="10710" width="100" height="100">
+   <BOUNDS type="Node" left="17895" top="10770" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filter" visible="1" slicecount="1" values="text">
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="1" values="text">
    </PIN>
-   <PIN pinname="Comparison" slicecount="1" values="Contains">
+   <PIN pinname="Comparison" slicecount="1" values="ContainsAny">
    </PIN>
    <PIN pinname="Input Index" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="167" srcpinname="Output String" dstnodeid="176" dstpinname="Input" linkstyle="VHV">
-   <LINKPOINT x="19560" y="10485">
+   <LINKPOINT x="20880" y="10545">
    </LINKPOINT>
-   <LINKPOINT x="16605" y="10485">
+   <LINKPOINT x="17925" y="10545">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="19" srcpinname="Matches" dstnodeid="176" dstpinname="Filter">
@@ -591,9 +593,9 @@
    <LINK srcnodeid="175" srcpinname="Input Index" dstnodeid="120" dstpinname="Index">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="179" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="13545" top="12285" width="480" height="480">
+   <BOUNDS type="Box" left="14865" top="12345" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="13545" top="12285" width="0" height="0">
+   <BOUNDS type="Node" left="14865" top="12345" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -609,9 +611,9 @@
    <LINK srcnodeid="179" srcpinname="Y Output Value" dstnodeid="153" dstpinname="Simulate">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="180" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="16950" top="12225" width="480" height="480">
+   <BOUNDS type="Box" left="18270" top="12285" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="16950" top="12225" width="0" height="0">
+   <BOUNDS type="Node" left="18270" top="12285" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -627,9 +629,9 @@
    <LINK srcnodeid="180" srcpinname="Y Output Value" dstnodeid="151" dstpinname="Simulate">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="182" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="16395" top="7440" width="1365" height="1515">
+   <BOUNDS type="Box" left="17715" top="7500" width="1365" height="1515">
    </BOUNDS>
-   <BOUNDS type="Node" left="16395" top="7440" width="0" height="0">
+   <BOUNDS type="Node" left="17715" top="7500" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -643,9 +645,9 @@
    <LINK srcnodeid="142" srcpinname="Matches" dstnodeid="182" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="183" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="12780" top="7440" width="1365" height="1515">
+   <BOUNDS type="Box" left="14100" top="7500" width="1365" height="1515">
    </BOUNDS>
-   <BOUNDS type="Node" left="12780" top="7440" width="0" height="0">
+   <BOUNDS type="Node" left="14100" top="7500" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -661,7 +663,7 @@
    <LINK srcnodeid="19" srcpinname="Matches" dstnodeid="183" dstpinname="Input String">
    </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="192">
-   <BOUNDS type="Node" left="2130" top="12405" width="100" height="100">
+   <BOUNDS type="Node" left="3450" top="12465" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -675,9 +677,9 @@
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="192" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="193" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="3150" top="6390" width="2775" height="885">
+   <BOUNDS type="Box" left="4470" top="6450" width="2775" height="885">
    </BOUNDS>
-   <BOUNDS type="Node" left="3150" top="6390" width="0" height="0">
+   <BOUNDS type="Node" left="4470" top="6450" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="|int Digital_02 = 2;&cr;&lf;int Digital_03 = 3;&cr;&lf;int Digital_04 = 4;&cr;&lf;int Digital_05 = 5;&cr;&lf;int Digital_06 = 6;&cr;&lf;int Digital_07 = 7;&cr;&lf;int Digital_08 = 8;&cr;&lf;int Digital_09 = 9;&cr;&lf;int Digital_10 = 10;&cr;&lf;int Digital_11 = 11;&cr;&lf;int Digital_12 = 12;&cr;&lf;int Digital_13 = 13;&cr;&lf;int Analog_A0 = A0;&cr;&lf;int Analog_A1 = A1;&cr;&lf;int Analog_A2 = A2;&cr;&lf;int Analog_A3 = A3;&cr;&lf;int Analog_A4 = A4;&cr;&lf;int Analog_A5 = A5;|">
    </PIN>
@@ -693,7 +695,7 @@
    <LINK srcnodeid="192" srcpinname="Output" dstnodeid="15" dstpinname="Input String">
    </LINK>
    <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="194">
-   <BOUNDS type="Node" left="3870" top="8970" width="100" height="100">
+   <BOUNDS type="Node" left="5190" top="9030" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filter" visible="1">
    </PIN>
@@ -705,7 +707,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="196">
-   <BOUNDS type="Node" left="3135" top="8445" width="100" height="100">
+   <BOUNDS type="Node" left="4455" top="8505" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -719,7 +721,7 @@
    <LINK srcnodeid="196" srcpinname="Output" dstnodeid="194" dstpinname="Input">
    </LINK>
    <NODE systemname="Occurrence (Value)" filename="%VVVV%\addonpack\lib\nodes\plugins\Occurrence.dll" nodename="Occurrence (Value)" componentmode="Hidden" id="198">
-   <BOUNDS type="Node" left="4035" top="9465" width="100" height="100">
+   <BOUNDS type="Node" left="5355" top="9525" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -729,7 +731,7 @@
    <LINK srcnodeid="194" srcpinname="Input Index" dstnodeid="198" dstpinname="Input">
    </LINK>
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="199">
-   <BOUNDS type="Node" left="3150" top="9915" width="100" height="100">
+   <BOUNDS type="Node" left="4470" top="9975" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Index" visible="1">
    </PIN>
@@ -743,7 +745,7 @@
    <LINK srcnodeid="196" srcpinname="Output" dstnodeid="199" dstpinname="Input" linkstyle="PolyLine">
    </LINK>
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="200">
-   <BOUNDS type="Node" left="3150" top="10590" width="100" height="100">
+   <BOUNDS type="Node" left="4470" top="10650" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -757,7 +759,7 @@
    <LINK srcnodeid="200" srcpinname="Output" dstnodeid="192" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="201">
-   <BOUNDS type="Node" left="4050" top="8460" width="100" height="100">
+   <BOUNDS type="Node" left="5370" top="8520" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -767,17 +769,177 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="19" srcpinname="Matches" dstnodeid="201" dstpinname="Input 1" linkstyle="VHV">
-   <LINKPOINT x="12765" y="7650">
+   <LINKPOINT x="14085" y="7710">
    </LINKPOINT>
-   <LINKPOINT x="7905" y="7650">
+   <LINKPOINT x="9225" y="7710">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="142" srcpinname="Matches" dstnodeid="201" dstpinname="Input 2" linkstyle="VHV">
-   <LINKPOINT x="16260" y="7658">
+   <LINKPOINT x="17580" y="7718">
    </LINKPOINT>
-   <LINKPOINT x="8385" y="7658">
+   <LINKPOINT x="9705" y="7718">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="201" srcpinname="Output" dstnodeid="194" dstpinname="Filter">
+   </LINK>
+   <NODE systemname="RegExpr (String)" nodename="RegExpr (String)" componentmode="Hidden" id="206">
+   <BOUNDS type="Node" left="10800" top="2745" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Case Sensitive Match" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Regular Expression" slicecount="1" values="|VAVA.FUNKTION ( .*? ) VAVA|">
+   </PIN>
+   <PIN pinname="Match 1" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Clean (String)" nodename="Clean (String)" componentmode="Hidden" id="205">
+   <BOUNDS type="Node" left="10800" top="3315" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="204">
+   <BOUNDS type="Node" left="10815" top="3915" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="CarriageReturnLineFeed">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="203">
+   <BOUNDS type="Node" left="10080" top="4830" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" values="vavaSETUP">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="202" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="9300" top="2745" width="1380" height="1410">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9300" top="2745" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="202" srcpinname="Output String" dstnodeid="203" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="204" srcpinname="Output" dstnodeid="203" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="206" srcpinname="Match 1" dstnodeid="205" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="205" srcpinname="Output" dstnodeid="204" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="206" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="203" srcpinname="Output" dstnodeid="14" dstpinname="Input 4">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="14" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="14" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="RegExpr (String)" nodename="RegExpr (String)" componentmode="Hidden" id="211">
+   <BOUNDS type="Node" left="1845" top="2730" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Case Sensitive Match" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Regular Expression" slicecount="1" values="|VAVA.PRESETUP ( .*? ) VAVA|">
+   </PIN>
+   <PIN pinname="Match 1" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Clean (String)" nodename="Clean (String)" componentmode="Hidden" id="210">
+   <BOUNDS type="Node" left="1845" top="3300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="209">
+   <BOUNDS type="Node" left="1860" top="3900" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="CarriageReturnLineFeed">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="208">
+   <BOUNDS type="Node" left="1125" top="4815" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" values="vavaPRESETUP">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="207" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="345" top="2730" width="1380" height="1410">
+   </BOUNDS>
+   <BOUNDS type="Node" left="345" top="2730" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="vavaPRESETUP">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="207" srcpinname="Output String" dstnodeid="208" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="209" srcpinname="Output" dstnodeid="208" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="211" srcpinname="Match 1" dstnodeid="210" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="211" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="210" srcpinname="Output" dstnodeid="209" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="208" srcpinname="Output" dstnodeid="14" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="213" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="780" top="7590" width="2520" height="2760">
+   </BOUNDS>
+   <BOUNDS type="Node" left="780" top="7590" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="208" srcpinname="Output" dstnodeid="213" dstpinname="Input String">
    </LINK>
    </PATCH>

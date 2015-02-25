@@ -1,0 +1,253 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\temp\Pepe_temp.v4p" scrollx="4560" scrolly="3450" systemname="Pepe_temp" filename="C:\Users\jjh\OneDrive\Projekte\pepe\temp\Pepe_temp.v4p">
+   <BOUNDS type="Window" left="3240" top="0" width="23310" height="15750">
+   </BOUNDS>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="139" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6990" top="14475" width="10650" height="16620">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6990" top="14475" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="noteToText" filename="..\subpatches\noteToText.v4p" nodename="..\subpatches\noteToText.v4p" componentmode="Hidden" id="140">
+   <BOUNDS type="Node" left="7005" top="13290" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7005" top="13290" width="12405" height="7305">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14400" top="0" width="14400" height="15750">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="lamp" filename="..\subpatches\lamp.v4p" nodename="..\subpatches\lamp.v4p" componentmode="Hidden" id="166">
+   <BOUNDS type="Node" left="7020" top="10275" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7020" top="10275" width="8310" height="7800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9495" top="765" width="18735" height="13710">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="cfbv">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Light" visible="1" slicecount="1" values="Pin1">
+   </PIN>
+   <PIN pinname="Button" slicecount="1" visible="1" values="|Pin 00|">
+   </PIN>
+   <PIN pinname="Outpin" visible="1" slicecount="1" values="42">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="171" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="7005" top="7710" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7005" top="7710" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_12">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="171" srcpinname="Output Enum" dstnodeid="166" dstpinname="Button">
+   </LINK>
+   <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="176">
+   <BOUNDS type="Node" left="7020" top="11910" width="5850" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="7020" top="11910">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="lamp" filename="..\subpatches\lamp.v4p" nodename="..\subpatches\lamp.v4p" componentmode="Hidden" id="225">
+   <BOUNDS type="Node" left="13725" top="7185" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13725" top="7185" width="8310" height="7800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9495" top="765" width="18735" height="13710">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Light" visible="1">
+   </PIN>
+   <PIN pinname="Button" slicecount="1" visible="1" values="Digital_02">
+   </PIN>
+   <PIN pinname="Outpin" visible="1" slicecount="1" values="Digital_05">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="226" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="13725" top="6075" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13725" top="6075" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_10">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="226" srcpinname="Output Enum" dstnodeid="225" dstpinname="Button">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="227" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="14310" top="6555" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14310" top="6555" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_03">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="227" srcpinname="Output Enum" dstnodeid="225" dstpinname="Outpin">
+   </LINK>
+   <NODE systemname="PlayPause" filename="..\snippes\PlayPause.v4p" componentmode="Hidden" id="232" nodename="..\snippes\PlayPause.v4p">
+   <BOUNDS type="Node" left="10545" top="8295" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10545" top="8295" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10545" top="2010" width="18255" height="11715">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="Digital_02">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="235" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="10020" top="7500" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10020" top="7500" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_12">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="235" srcpinname="Output Enum" dstnodeid="232" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="timeliner" filename="..\snippes\timeliner.v4p" componentmode="InAWindow" id="236" nodename="..\snippes\timeliner.v4p">
+   <BOUNDS type="Node" left="5775" top="8820" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5775" top="8820" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14445" top="0" width="14355" height="15750">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="140" srcpinname="Output" dstnodeid="139" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="timelineLED" filename="..\snippes\timelineLED.v4p" componentmode="Hidden" id="237" nodename="..\snippes\timelineLED.v4p">
+   <BOUNDS type="Node" left="14565" top="11070" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14565" top="11070" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="14400" height="15750">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1" slicecount="1" values="Digital_06">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="237" srcpinname="Output" dstnodeid="176" dstpinname="Input 4">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="238" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="7650" top="8145" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7650" top="8145" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_02">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="238" srcpinname="Output Enum" dstnodeid="166" dstpinname="Outpin">
+   </LINK>
+   <LINK srcnodeid="236" srcpinname="Output" dstnodeid="176" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="239" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="14820" top="8985" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14820" top="8985" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="value_LINE_00">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="239" srcpinname="Output Enum" dstnodeid="237" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="240" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="15600" top="9525" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15600" top="9525" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Digital_06">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="240" srcpinname="Output Enum" dstnodeid="237" dstpinname="Output">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="Output" dstnodeid="140" dstpinname="Input">
+   </LINK>
+   <NODE systemname="FromTo" filename="..\snippes\FromTo.v4p" componentmode="Hidden" id="230" nodename="..\snippes\FromTo.v4p">
+   <BOUNDS type="Node" left="13710" top="7815" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13710" top="7815" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13845" top="1875" width="13590" height="13530">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" values="300">
+   </PIN>
+   <PIN pinname="To" slicecount="1" values="500">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="225" srcpinname="Output" dstnodeid="230" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="FromTo" filename="..\snippes\FromTo.v4p" componentmode="Hidden" id="233" nodename="..\snippes\FromTo.v4p">
+   <BOUNDS type="Node" left="10890" top="8865" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10890" top="8865" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13845" top="1875" width="13590" height="13530">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="232" srcpinname="Output" dstnodeid="233" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="230" srcpinname="Output String" dstnodeid="176" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="goto" filename="..\snippes\goto.v4p" componentmode="InAWindow" id="241" nodename="..\snippes\goto.v4p">
+   <BOUNDS type="Node" left="9090" top="9690" width="1455" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9090" top="9690" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="11310" top="2670" width="13290" height="10440">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="Digital_12">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="241" srcpinname="Output" dstnodeid="176" dstpinname="Input 2">
+   </LINK>
+   </PATCH>

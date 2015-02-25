@@ -17,7 +17,7 @@
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="1" values="|VAVA.SETUP&cr;&lf;pinMode({{Pin}},INPUT_PULLUP);&cr;&lf;pinMode({{PinLamp}}, OUTPUT);&cr;&lf;&cr;&lf;VAVA.VARIABLE &cr;&lf;int sensorVal{{Pin}} = digitalRead({{Pin}});&cr;&lf;&cr;&lf;VAVA.SCRIPT&cr;&lf;  if (sensorVal{{Pin}} == HIGH) {&cr;&lf;    digitalWrite({{PinLamp}}, LOW);&cr;&lf;  } &cr;&lf;  else {&cr;&lf;    digitalWrite({{PinLamp}}, HIGH);&cr;&lf;  }&cr;&lf;VAVA|">
+   <PIN pinname="Input String" visible="1" slicecount="1" values="|VAVA.SETUP&cr;&lf;pinMode({{Pin}},INPUT_PULLUP);&cr;&lf;pinMode({{PinLamp}}, OUTPUT);&cr;&lf;&cr;&lf;VAVA.VARIABLE &cr;&lf;int sensorVal{{Pin}} = digitalRead({{Pin}});&cr;&lf;&cr;&lf;VAVA.SCRIPT&cr;&lf;  if (sensorVal{{Pin}} == HIGH) {&cr;&lf;//OFFSTATE&cr;&lf;    digitalWrite({{PinLamp}}, LOW);&cr;&lf;  } &cr;&lf;  else {&cr;&lf;    digitalWrite({{PinLamp}}, HIGH);&cr;&lf;  }&cr;&lf;VAVA|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -67,7 +67,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="0" top="2359" width="18870" height="12105">
    </BOUNDS>
-   <BOUNDS type="Window" left="10845" top="7020" width="18870" height="12105">
+   <BOUNDS type="Window" left="5070" top="2175" width="18870" height="12105">
    </BOUNDS>
    <PIN pinname="Inputs" visible="1">
    </PIN>

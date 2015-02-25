@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\lamp.v4p" systemname="lamp" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\lamp.v4p" scrollx="0" scrolly="-360">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\lamp.v4p" systemname="lamp" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\lamp.v4p" scrollx="0" scrolly="1500">
    <BOUNDS type="Window" left="9495" top="765" width="18735" height="13710">
    </BOUNDS>
    <PACK Name="Image" Version="0.2.0">
@@ -7,9 +7,9 @@
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="24" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1740" top="675" width="3840" height="3975">
+   <BOUNDS type="Box" left="1680" top="660" width="3840" height="3975">
    </BOUNDS>
-   <BOUNDS type="Node" left="1740" top="675" width="0" height="0">
+   <BOUNDS type="Node" left="1680" top="660" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -23,9 +23,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="98" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1725" top="17970" width="3870" height="4725">
+   <BOUNDS type="Box" left="1740" top="10245" width="3870" height="4725">
    </BOUNDS>
-   <BOUNDS type="Node" left="1725" top="17970" width="0" height="0">
+   <BOUNDS type="Node" left="1740" top="10245" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -67,7 +67,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="0" top="2359" width="18870" height="12105">
    </BOUNDS>
-   <BOUNDS type="Window" left="10845" top="7020" width="18870" height="12105">
+   <BOUNDS type="Window" left="5070" top="2175" width="18870" height="12105">
    </BOUNDS>
    <PIN pinname="Inputs" visible="1">
    </PIN>
@@ -83,9 +83,9 @@
    <LINK srcnodeid="147" srcpinname="Output Enum" dstnodeid="170" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="171" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1905" top="5145" width="795" height="240">
+   <BOUNDS type="Box" left="2010" top="5235" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1905" top="5145" width="0" height="0">
+   <BOUNDS type="Node" left="2010" top="5235" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="{{Pin}}">
    </PIN>
