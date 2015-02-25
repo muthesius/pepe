@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subs\NodeID.v4p" scrollx="0" scrolly="0" systemname="NodeID" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subs\NodeID.v4p">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\NodeID.v4p" scrollx="0" scrolly="0" systemname="NodeID" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\NodeID.v4p">
    <NODE id="0" systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden">
    <PIN pinname="To" visible="1">
    </PIN>
@@ -124,7 +124,7 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="ID in ParentPatch" dstnodeid="2" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="3510" top="1650" width="7140" height="10635">
+   <BOUNDS type="Window" left="-1" top="-1" width="5200" height="6645">
    </BOUNDS>
    <PACK Name="Image" Version="0.2.0">
    </PACK>

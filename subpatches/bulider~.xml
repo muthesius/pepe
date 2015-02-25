@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subs\bulider.v4p" scrollx="0" scrolly="720" systemname="bulider" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subs\bulider.v4p">
-   <BOUNDS type="Window" left="1050" top="2850" width="14460" height="6915">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\bulider.v4p" scrollx="0" scrolly="1800" systemname="bulider" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\bulider.v4p">
+   <BOUNDS type="Window" left="10575" top="6270" width="14460" height="6000">
    </BOUNDS>
    <NODE systemname="Occurrence (String)" filename="%VVVV%\addonpack\lib\nodes\plugins\Occurrence.dll" nodename="Occurrence (String)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="4485" top="3060" width="3225" height="270">
@@ -439,7 +439,7 @@
    <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="49" dstpinname="Input">
    </LINK>
    <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="53">
-   <BOUNDS type="Node" left="8055" top="3705" width="100" height="100">
+   <BOUNDS type="Node" left="7965" top="3885" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -464,6 +464,10 @@
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="52" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="3" dstpinname="Input 3">
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="3" dstpinname="Input 3">
    </LINK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="54">
+   <BOUNDS type="Node" left="8385" top="3495" width="100" height="100">
+   </BOUNDS>
+   </NODE>
    </PATCH>

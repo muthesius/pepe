@@ -14,12 +14,12 @@ using VVVV.Core.Logging;
 namespace VVVV.Nodes
 {
 	#region PluginInfo
-	[PluginInfo(Name = "timeline", Category = "Enumerations", Version = "Dynamic", Help = "Basic template with dynamic custom enumeration", Tags = "")]
+	[PluginInfo(Name = "Timeline", Category = "Enumerations", Version = "Dynamic", Help = "Basic template with dynamic custom enumeration", Tags = "")]
 	#endregion PluginInfo
-	public class DynamicEnumerationstimelineNode : IPluginEvaluate
+	public class DynamicEnumerationsTimelineNode : IPluginEvaluate
 	{
 		#region fields & pins
-		[Input("Input", EnumName = "MyDynamicEnum")]
+		[Input("Input", EnumName = "Timeline")]
 		public IDiffSpread<EnumEntry> FInput;
 
 		[Input("UpdateEnum", IsBang = true)]
@@ -40,14 +40,14 @@ namespace VVVV.Nodes
 
 		//add some entries to the enum in the constructor
 		[ImportingConstructor()]
-		public DynamicEnumerationstimelineNode()
+		public DynamicEnumerationsTimelineNode()
 		{
 			var s = new string[] {
-				"one"
+				"value_LINE_00"
 			};
 			//Please rename your Enum Type to avoid 
 			//numerous "MyDynamicEnum"s in the system
-			EnumManager.UpdateEnum("MyDynamicEnum", "two", s);
+			EnumManager.UpdateEnum("Timeline", "two", s);
 		}
 
 		//called when data for any output pin is requested
@@ -57,7 +57,7 @@ namespace VVVV.Nodes
 			FOrdOutput.SliceCount = FInput.SliceCount;
 
 			if ((FChangeEnum[0]) && (FEnumStrings.SliceCount > 0)) {
-				EnumManager.UpdateEnum("MyDynamicEnum", FEnumStrings[0], FEnumStrings.ToArray());
+				EnumManager.UpdateEnum("Timeline", FEnumStrings[0], FEnumStrings.ToArray());
 			}
 
 			if (FInput.IsChanged) {

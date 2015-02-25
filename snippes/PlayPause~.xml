@@ -67,7 +67,7 @@
    </BOUNDS>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN pinname="Input String" slicecount="1" values="|VAVA.SETUP&cr;&lf;pinMode({{Pin}},INPUT_PULLUP);&cr;&lf;&cr;&lf;VAVA.VARIABLE &cr;&lf;int sensorVal{{Pin}} = digitalRead({{Pin}});&cr;&lf;&cr;&lf;VAVA.SCRIPT&cr;&lf;  if (sensorVal{{Pin}} == HIGH) {&cr;&lf;    intervalCounter--;&cr;&lf;  } &cr;&lf;VAVA.FUNKTION&cr;&lf;|">
+   <PIN pinname="Input String" slicecount="1" values="|VAVA.SETUP&cr;&lf;pinMode({{Pin}},INPUT_PULLUP);&cr;&lf;&cr;&lf;VAVA.VARIABLE &cr;&lf;int sensorVal{{Pin}} = digitalRead({{Pin}});&cr;&lf;&cr;&lf;VAVA.SCRIPT&cr;&lf;  if (sensorVal{{Pin}} == LOW) {&cr;&lf;        previousMillis = currentMillis;&cr;&lf;  } &cr;&lf;VAVA.FUNKTION&cr;&lf;|">
    </PIN>
    </NODE>
    <LINK srcnodeid="43" srcpinname="Output String" dstnodeid="44" dstpinname="Regular Expression">
@@ -88,7 +88,7 @@
    </NODE>
    <LINK srcnodeid="15" srcpinname="Output Enum" dstnodeid="19" dstpinname="Input">
    </LINK>
-   <NODE systemname="NodeID" filename="..\subs\NodeID.v4p" nodename="..\subs\NodeID.v4p" componentmode="Hidden" id="45">
+   <NODE systemname="NodeID" filename="..\subpatches\NodeID.v4p" nodename="..\subpatches\NodeID.v4p" componentmode="Hidden" id="45">
    <BOUNDS type="Node" left="1369" top="13229" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="15" top="9907" width="5200" height="6645">
@@ -100,7 +100,7 @@
    </LINK>
    <LINK srcnodeid="45" srcpinname="Output" dstnodeid="44" dstpinname="Input">
    </LINK>
-   <NODE systemname="bulider" filename="..\subs\bulider.v4p" componentmode="Hidden" id="47" nodename="..\subs\bulider.v4p">
+   <NODE systemname="bulider" filename="..\subpatches\bulider.v4p" componentmode="Hidden" id="47" nodename="..\subpatches\bulider.v4p">
    <BOUNDS type="Node" left="1350" top="16830" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="1350" top="16830" width="4800" height="3600">

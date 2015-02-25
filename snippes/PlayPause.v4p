@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\PlayPause.v4p" scrollx="165" scrolly="10515" systemname="PlayPause" filename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\PlayPause.v4p">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\PlayPause.v4p" scrollx="165" scrolly="9795" systemname="PlayPause" filename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\PlayPause.v4p">
    <BOUNDS type="Window" left="10545" top="2010" width="18255" height="11715">
    </BOUNDS>
    <PACK Name="Image" Version="0.2.0">
@@ -88,7 +88,7 @@
    </NODE>
    <LINK srcnodeid="15" srcpinname="Output Enum" dstnodeid="19" dstpinname="Input">
    </LINK>
-   <NODE systemname="NodeID" filename="..\subs\NodeID.v4p" nodename="..\subs\NodeID.v4p" componentmode="Hidden" id="45">
+   <NODE systemname="NodeID" filename="..\subpatches\NodeID.v4p" nodename="..\subpatches\NodeID.v4p" componentmode="Hidden" id="45">
    <BOUNDS type="Node" left="1369" top="13229" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="15" top="9907" width="5200" height="6645">
@@ -100,7 +100,7 @@
    </LINK>
    <LINK srcnodeid="45" srcpinname="Output" dstnodeid="44" dstpinname="Input">
    </LINK>
-   <NODE systemname="bulider" filename="..\subs\bulider.v4p" componentmode="Hidden" id="47" nodename="..\subs\bulider.v4p">
+   <NODE systemname="bulider" filename="..\subpatches\bulider.v4p" componentmode="Hidden" id="47" nodename="..\subpatches\bulider.v4p">
    <BOUNDS type="Node" left="1350" top="16830" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="1350" top="16830" width="4800" height="3600">

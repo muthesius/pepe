@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\noteToText.v4p" systemname="noteToText" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\noteToText.v4p" scrollx="0" scrolly="1545">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\noteToText.v4p" systemname="noteToText" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\noteToText.v4p" scrollx="3810" scrolly="5805">
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="7200" top="1560" width="100" height="100">
    </BOUNDS>
@@ -228,7 +228,7 @@
    </LINK>
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="11" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="14400" top="0" width="14400" height="15750">
+   <BOUNDS type="Window" left="7275" top="405" width="21525" height="15750">
    </BOUNDS>
    <PACK Name="Image" Version="0.2.0">
    </PACK>

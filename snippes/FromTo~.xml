@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\FromTo.v4p" systemname="FromTo" filename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\FromTo.v4p" scrollx="0" scrolly="2385">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\FromTo.v4p" systemname="FromTo" filename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\FromTo.v4p" scrollx="0" scrolly="3105">
    <BOUNDS type="Window" left="13845" top="1875" width="13590" height="13530">
    </BOUNDS>
    <PACK Name="Image" Version="0.2.0">
@@ -131,7 +131,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4485" top="7140" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="1000">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="300">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -165,7 +165,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5910" top="7125" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="2000">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="500">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\lamp.v4p" systemname="lamp" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\lamp.v4p" scrollx="0" scrolly="-360">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\Light.v4p" systemname="Light" filename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\Light.v4p" scrollx="0" scrolly="-360">
    <BOUNDS type="Window" left="9495" top="765" width="18735" height="13710">
    </BOUNDS>
    <PACK Name="Image" Version="0.2.0">
@@ -62,7 +62,7 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="snapContstrukt" filename="snapContstrukt.v4p" nodename="snapContstrukt.v4p" componentmode="Hidden" id="170">
+   <NODE systemname="snapContstrukt" filename="..\subpatches\snapContstrukt.v4p" nodename="snapContstrukt.v4p" componentmode="Hidden" id="170">
    <BOUNDS type="Node" left="1708" top="8411" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="0" top="2359" width="18870" height="12105">
