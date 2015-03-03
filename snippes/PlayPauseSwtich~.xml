@@ -1,0 +1,145 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\PlayPauseSwtich.v4p" scrollx="0" scrolly="360" systemname="PlayPauseSwtich" filename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\PlayPauseSwtich.v4p">
+   <BOUNDS type="Window" left="10545" top="2010" width="18255" height="11715">
+   </BOUNDS>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="43" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1800" top="4465" width="1125" height="345">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1800" top="4465" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="{{Pin}}">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="InputPepe (Enumerations Dynamic)" filename="..\subpatches\plugins\DynamicEnumerationsInputPepe\DynamicEnumerationsInputPepe.csproj" nodename="InputPepe (Enumerations Dynamic)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="3435" top="5320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum Entries" visible="1" slicecount="5" values="|Pin 00|,|Pin 01|,|Pin 02|,|Pin 03|,|Pin 04|">
+   </PIN>
+   <PIN pinname="UpdateEnum" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Name" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="3435" top="5320">
+   </BOUNDS>
+   </NODE>
+   <NODE id="17" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="1335" top="450" width="3180" height="2145">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1335" top="450" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="|pepe.SETUP&cr;&lf;pinMode({{Pin}},INPUT_PULLUP);&cr;&lf;&cr;&lf;pepe.Script &cr;&lf;int sensorVal{{Pin}} = digitalRead({{Pin}});&cr;&lf;&cr;&lf;  if (sensorVal{{Pin}} == LOW) {&cr;&lf;        previousMillis = currentMillis;&cr;&lf;  } &cr;&lf;pepe&cr;&lf;|">
+   </PIN>
+   </NODE>
+   <NODE id="15" systemname="IOBox (Enumerations)" componentmode="InABox" nodename="IOBox (Enumerations)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input 1|">
+   </PIN>
+   <BOUNDS type="Box" left="3435" top="4275" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3435" top="4275" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Input Enum" slicecount="1" values="Digital_02">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Output Enum" dstnodeid="19" dstpinname="Input">
+   </LINK>
+   <NODE systemname="UnifyVars" filename="..\subpatches\UnifyVars.v4p" nodename="..\subpatches\UnifyVars.v4p" componentmode="Hidden" id="45">
+   <BOUNDS type="Node" left="1324" top="3209" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="75" top="0" width="5200" height="6645">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="5200" height="6645">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="45" dstpinname="Input">
+   </LINK>
+   <NODE systemname="MakeModule" filename="..\subpatches\MakeModule.v4p" componentmode="Hidden" id="47" nodename="..\subpatches\MakeModule.v4p">
+   <BOUNDS type="Node" left="1305" top="6810" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1305" top="6810" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="2940" top="0" width="25155" height="15750">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="|pepe.SETUP&cr;&lf;pinMode(,INPUT_PULLUP);&cr;&lf;&cr;&lf;pepe.Script &cr;&lf;int sensorVal_NodeID_45_0 = digitalRead();&cr;&lf;&cr;&lf;  if (sensorVal_NodeID_45_0 == LOW) {&cr;&lf;        previousMillis = currentMillis;&cr;&lf;  } &cr;&lf;pepe&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Output2" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="49">
+   <BOUNDS type="Node" left="1305" top="7800" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1305" top="7800" width="4125" height="3540">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="47" srcpinname="Output" dstnodeid="49" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="53" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3300" top="6060" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3300" top="6060" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Name" dstnodeid="53" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="ApplyPins" filename="..\subpatches\ApplyPins.v4p" nodename="..\subpatches\ApplyPins.v4p" componentmode="Hidden" id="55">
+   <BOUNDS type="Node" left="1335" top="5745" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1335" top="5745" width="6720" height="3975">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="6720" height="3975">
+   </BOUNDS>
+   <PIN pinname="VarName" visible="1" slicecount="1" values="{{timeline}}">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="To" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="45" srcpinname="Output" dstnodeid="55" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Output" dstnodeid="47" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Name" dstnodeid="55" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Output String" dstnodeid="55" dstpinname="VarName">
+   </LINK>
+   </PATCH>

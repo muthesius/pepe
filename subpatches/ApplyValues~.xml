@@ -1,0 +1,77 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\ApplyValues.v4p" systemname="ApplyValues" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\ApplyValues.v4p">
+   <BOUNDS type="Window" left="21075" top="6390" width="9000" height="6000">
+   </BOUNDS>
+   <NODE id="4" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <BOUNDS type="Box" left="4275" top="5505" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4275" top="5505" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <NODE id="3" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <BOUNDS type="Box" left="7230" top="3150" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7230" top="3150" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="To">
+   </PIN>
+   </NODE>
+   <NODE id="2" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <BOUNDS type="Box" left="4275" top="3030" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4275" top="3030" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <NODE id="1" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5535" top="3190" width="1095" height="345">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5535" top="3190" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="VarName">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="{{timeline}}">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE id="0" componentmode="Hidden" nodename=":PLUGINS:\RegExprNodes.dll|VVVV.Nodes.RegExprReplaceNode" systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll">
+   <BOUNDS type="Node" height="270" left="4275" top="4735" width="3720">
+   </BOUNDS>
+   <BOUNDS type="Box" height="0" left="4275" top="4735" width="0">
+   </BOUNDS>
+   <BOUNDS type="Window" height="0" left="18120" top="7395" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Regular Expression" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Output Bins" visible="1">
+   </PIN>
+   <PIN pinname="Matches" visible="1">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="4" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output String" dstnodeid="0" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output String" dstnodeid="0" dstpinname="Regular Expression">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   </PATCH>

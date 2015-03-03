@@ -1,0 +1,207 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\Timeline.v4p" systemname="Timeline" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\Timeline.v4p" scrollx="0" scrolly="2160">
+   <BOUNDS type="Window" left="11145" top="0" width="17655" height="15750">
+   </BOUNDS>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="49">
+   <BOUNDS type="Node" left="2550" top="6480" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2550" top="6480" width="11385" height="8475">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <NODE id="96" systemname="Timeliner (Animation)" filename="%VVVV%\lib\nodes\plugins\Timeliner.dll" nodename="Timeliner (Animation)" componentmode="InAWindow">
+   <PIN pinname="GUI Settings" slicecount="1" values="|&lt;GUI&gt;&lt;SPLITTER Position=&quot;60&quot; /&gt;&lt;/GUI&gt;|">
+   </PIN>
+   <BOUNDS type="Node" left="1335" top="4140" width="1470" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1335" top="4140" width="12030" height="3570">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4245" top="6510" width="14355" height="15750">
+   </BOUNDS>
+   <PIN pinname="Translate" slicecount="1" values="2.7068">
+   </PIN>
+   <PIN pinname="Scale" slicecount="1" values="48.5147">
+   </PIN>
+   <PIN pinname="Pin Settings" slicecount="3" values="|&lt;PIN Name=&quot;Ruler0&quot; Type=&quot;Ruler&quot; SliceCount=&quot;0&quot; Height=&quot;40&quot; Parent=&quot;0&quot; /&gt;|,|&lt;PIN Name=&quot;Automata0&quot; Type=&quot;Automata&quot; SliceCount=&quot;1&quot; Height=&quot;40&quot; Parent=&quot;0&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; /&gt;|,|&lt;PIN Name=&quot;Value0&quot; Type=&quot;Value&quot; SliceCount=&quot;4&quot; Height=&quot;402&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Linear&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|">
+   </PIN>
+   <PIN pinname="Time In" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Value0" visible="1">
+   </PIN>
+   <PIN pinname="Set Time" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Value1-Time0">
+   </PIN>
+   <PIN pinname="Value1-Value0">
+   </PIN>
+   <PIN pinname="Value1-InType0">
+   </PIN>
+   <PIN pinname="Value1-OutType0">
+   </PIN>
+   <PIN pinname="Value0-Time0" slicecount="11" values="0.723784870791507,7.73487008440507,8.67285377308957,8.73302841186523,15.5371865302969,611.075344183438,611.075344183438,872.724791397432,872.724791397432,1868.72906611413,1868.72906611413">
+   </PIN>
+   <PIN pinname="Value0-Value0" slicecount="11" values="0,1,0,0.46000000834465,0,0.985074626865672,0.985074626865672,1,1,0,0">
+   </PIN>
+   <PIN pinname="Value0-InType0" slicecount="11" values="1,1,1,1,1,2,2,2,2,2,2">
+   </PIN>
+   <PIN pinname="Value0-OutType0" slicecount="11" values="1,1,1,1,1,2,2,2,2,2,2">
+   </PIN>
+   <PIN pinname="Value0-Time1" slicecount="4" values="0.462188909867084,1.12635056077513,7.43642091751099,8.84339618682861">
+   </PIN>
+   <PIN pinname="Value0-Value1" slicecount="4" values="0.87,0,0.06,0.909999997615815">
+   </PIN>
+   <PIN pinname="Value0-InType1" slicecount="4" values="2,1,1,1">
+   </PIN>
+   <PIN pinname="Value0-OutType1" slicecount="4" values="2,1,1,1">
+   </PIN>
+   <PIN pinname="Automata0-Time0" slicecount="3" values="7.68180312754199,10,INF">
+   </PIN>
+   <PIN pinname="Automata0-Name0" slicecount="3" values="Test,x,+INF">
+   </PIN>
+   <PIN pinname="Automata0-Events0" slicecount="3" values="|OnEnd loop;|,|OnEnd loop;|,|OnEnd pause;|">
+   </PIN>
+   <PIN pinname="Playing" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Seeking" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Scratching" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Window Handle" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Automata0-State" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Automata0-StateTime" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Value0-Time2" slicecount="7" values="0.475220236570546,1.25425732135773,2.61859679222107,4.57983493804932,6.96742916107178,7.64959907531738,9.44029426574707">
+   </PIN>
+   <PIN pinname="Value0-Value2" slicecount="7" values="0.33,0.680000007152557,0.860000014305115,0.659999998807907,0.269999973773956,0.239999994635582,0.699999988079071">
+   </PIN>
+   <PIN pinname="Value0-InType2" slicecount="7" values="2,1,1,1,1,1,1">
+   </PIN>
+   <PIN pinname="Value0-OutType2" slicecount="7" values="2,1,1,1,1,1,1">
+   </PIN>
+   <PIN pinname="Value0-Time3" slicecount="9" values="0.911848229133196,1.29689300060272,2.37983791245741,4.10275750078304,5.13409805297852,7.88621117622109,8.84339618682861,9.22711658477783,12.6379652023315">
+   </PIN>
+   <PIN pinname="Value0-Value3" slicecount="9" values="0,0.239999994635582,0.120000009536743,0.219999973773956,0.769999995231629,0.820000000298024,0.560000002384186,0.850000023841858,0.639999985694885">
+   </PIN>
+   <PIN pinname="Value0-InType3" slicecount="9" values="2,1,1,1,1,1,1,1,1">
+   </PIN>
+   <PIN pinname="Value0-OutType3" slicecount="9" values="2,1,1,1,1,1,1,1,1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="119" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3525" top="3825" width="795" height="765">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3525" top="3825" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Render">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="DoTimelines" filename="DoTimelines.v4p" nodename="DoTimelines.v4p" componentmode="Hidden" id="225">
+   <BOUNDS type="Node" left="2534" top="4810" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="0" width="16275" height="14470">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4845" top="1980" width="16275" height="14460">
+   </BOUNDS>
+   <PIN pinname="Overflow" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Time" visible="1">
+   </PIN>
+   <PIN pinname="SetTime" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="96" srcpinname="Value0" dstnodeid="225" dstpinname="TimelinerValve">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Automata0-StateTime" dstnodeid="225" dstpinname="StateTime">
+   </LINK>
+   <LINK srcnodeid="119" srcpinname="Y Output Value" dstnodeid="225" dstpinname="Render">
+   </LINK>
+   <LINK srcnodeid="225" srcpinname="Output" dstnodeid="49" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="228" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3060" top="5775" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3060" top="5775" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="225" srcpinname="Time" dstnodeid="228" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="225" srcpinname="SetTime" dstnodeid="96" dstpinname="Set Time">
+   <LINKPOINT x="4854" y="5271">
+   </LINKPOINT>
+   <LINKPOINT x="4773" y="3927">
+   </LINKPOINT>
+   <LINKPOINT x="3747" y="3228">
+   </LINKPOINT>
+   <LINKPOINT x="2811" y="3804">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="225" srcpinname="Time" dstnodeid="96" dstpinname="Time In">
+   <LINKPOINT x="3880" y="5717">
+   </LINKPOINT>
+   <LINKPOINT x="4835" y="5645">
+   </LINKPOINT>
+   <LINKPOINT x="5385" y="3938">
+   </LINKPOINT>
+   <LINKPOINT x="3820" y="3040">
+   </LINKPOINT>
+   <LINKPOINT x="2525" y="3538">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="229" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1050" top="5700" width="1125" height="2250">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1050" top="5700" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="8">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="96" srcpinname="Automata0-State" dstnodeid="229" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="230" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1050" top="8130" width="1110" height="2685">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1050" top="8130" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="96" srcpinname="Automata0-StateTime" dstnodeid="230" dstpinname="Y Input Value">
+   </LINK>
+   </PATCH>

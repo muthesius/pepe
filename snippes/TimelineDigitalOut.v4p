@@ -1,0 +1,189 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\TimelineDigitalOut.v4p" systemname="TimelineDigitalOut" filename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\TimelineDigitalOut.v4p" scrollx="0" scrolly="-360">
+   <BOUNDS type="Window" left="13395" top="2580" width="14400" height="8550">
+   </BOUNDS>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="13" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1275" top="6675" width="1095" height="345">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1275" top="6675" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="{{Pin}}">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="11" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="720" top="1080" width="3405" height="2490">
+   </BOUNDS>
+   <BOUNDS type="Node" left="720" top="1080" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="|pepe.Setup&cr;&lf;pinMode({{Pin}}, OUTPUT);&cr;&lf;&cr;&lf;pepe.Script&cr;&lf;  &cr;&lf;  analogWrite({{Pin}}, {{timeline}});    &cr;&lf;&cr;&lf;pepe|">
+   </PIN>
+   </NODE>
+   <NODE systemname="UniqueVariables" filename="..\subpatches\UniqueVariables.v4p" nodename="..\subpatches\UniqueVariables.v4p" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="724" top="4064" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="150" top="1050" width="5200" height="6645">
+   </BOUNDS>
+   <BOUNDS type="Window" left="3510" top="1650" width="16530" height="10635">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Output String" dstnodeid="9" dstpinname="Input">
+   </LINK>
+   <NODE systemname="MakeModule" filename="..\subpatches\MakeModule.v4p" componentmode="Hidden" id="8" nodename="..\subpatches\MakeModule.v4p">
+   <BOUNDS type="Node" left="705" top="8655" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="705" top="8655" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1050" top="2850" width="14460" height="6915">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="7">
+   <BOUNDS type="Node" left="705" top="9645" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="705" top="9645" width="4125" height="3540">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="7" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="OutputPepe (Enumerations Dynamic)" filename="..\subpatches\plugins\DynamicEnumerationsOutputPepe\DynamicEnumerationsOutputPepe.csproj" nodename="OutputPepe (Enumerations Dynamic)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="2985" top="7165" width="1095" height="270">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="UpdateEnum" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enum Entries" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Name" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="2985" top="7165">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <NODE id="15" systemname="IOBox (Enumerations)" componentmode="InABox" nodename="IOBox (Enumerations)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <BOUNDS type="Box" left="2985" top="6480" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2985" top="6480" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Input Enum" slicecount="1" values="Digital_06">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Output Enum" dstnodeid="16" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="28" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="2670" top="4800" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2670" top="4800" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="value_LINE_00">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Timeline (Enumerations Dynamic)" filename="..\subpatches\plugins\DynamicEnumerationsTimeline\DynamicEnumerationsTimeline.csproj" nodename="Timeline (Enumerations Dynamic)" componentmode="Hidden" id="27">
+   <BOUNDS type="Node" left="2670" top="5340" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="UpdateEnum" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enum Entries" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="Timeline00">
+   </PIN>
+   <PIN pinname="Name" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Output Enum" dstnodeid="27" dstpinname="Input">
+   </LINK>
+   <NODE systemname="SetVarToPin" filename="..\subpatches\SetVarToPin.v4p" nodename="..\subpatches\SetVarToPin.v4p" componentmode="Hidden" id="40">
+   <BOUNDS type="Node" left="705" top="5580" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="705" top="5580" width="6720" height="3975">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="6720" height="3975">
+   </BOUNDS>
+   <PIN pinname="VarName" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="40" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Name" dstnodeid="40" dstpinname="To">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="41" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1245" top="4905" width="900" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1245" top="4905" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="{{timeline}}">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Output String" dstnodeid="40" dstpinname="VarName">
+   </LINK>
+   <NODE systemname="SetVarToPin" filename="..\subpatches\SetVarToPin.v4p" nodename="..\subpatches\SetVarToPin.v4p" componentmode="Hidden" id="42">
+   <BOUNDS type="Node" left="705" top="7410" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="705" top="7410" width="6720" height="3975">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="6720" height="3975">
+   </BOUNDS>
+   <PIN pinname="VarName" visible="1" slicecount="1" values="{{timeline}}">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="40" srcpinname="Output" dstnodeid="42" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="8" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output String" dstnodeid="42" dstpinname="VarName">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Name" dstnodeid="42" dstpinname="To">
+   </LINK>
+   </PATCH>

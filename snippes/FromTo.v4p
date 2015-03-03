@@ -1,29 +1,15 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\FromTo.v4p" systemname="FromTo" filename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\FromTo.v4p" scrollx="0" scrolly="8145">
-   <BOUNDS type="Window" left="13845" top="1875" width="13590" height="13530">
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\FromTo.v4p" systemname="FromTo" filename="C:\Users\jjh\OneDrive\Projekte\pepe\snippes\FromTo.v4p" scrollx="0" scrolly="1440">
+   <BOUNDS type="Window" left="6915" top="555" width="13590" height="13530">
    </BOUNDS>
    <PACK Name="Image" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="855" top="690" width="2145" height="900">
-   </BOUNDS>
-   <BOUNDS type="Box" left="855" top="690" width="2145" height="900">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|if(1800 &lt;= intervalCounter){&cr;&lf;     intervalCounter = 0;&cr;&lf;     snooze = false;&cr;&lf;    }|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="1">
    <BOUNDS type="Node" left="1710" top="3810" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1710" top="3810" width="5985" height="2790">
+   <BOUNDS type="Box" left="1710" top="3810" width="3285" height="1380">
    </BOUNDS>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -31,9 +17,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1695" top="14055" width="12150" height="10560">
+   <BOUNDS type="Box" left="1680" top="12180" width="12150" height="10560">
    </BOUNDS>
-   <BOUNDS type="Node" left="1695" top="14055" width="0" height="0">
+   <BOUNDS type="Node" left="1680" top="12180" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -55,11 +41,11 @@
    </PIN>
    <PIN pinname="Match 1" visible="1" pintype="Output">
    </PIN>
-   <BOUNDS type="Node" left="2100" top="9405" width="100" height="100">
+   <BOUNDS type="Node" left="2070" top="7830" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Case Sensitive Match" slicecount="1" pintype="Input" visible="1" values="0">
    </PIN>
-   <PIN pinname="Regular Expression" slicecount="1" pintype="Configuration" values="|VAVA.SCRIPT  ( .*? ) VAVA|">
+   <PIN pinname="Regular Expression" slicecount="1" pintype="Configuration" values="|pepe.Script  ( .*? ) pepe|">
    </PIN>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -71,7 +57,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="10">
-   <BOUNDS type="Node" left="2445" top="11220" width="100" height="100">
+   <BOUNDS type="Node" left="2415" top="9645" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -87,7 +73,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="11">
-   <BOUNDS type="Node" left="2610" top="10350" width="100" height="100">
+   <BOUNDS type="Node" left="2580" top="8775" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -99,11 +85,11 @@
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="10" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="15" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="3735" top="8535" width="5400" height="330">
+   <BOUNDS type="Box" left="3705" top="6960" width="5475" height="495">
    </BOUNDS>
-   <BOUNDS type="Node" left="3735" top="8535" width="0" height="0">
+   <BOUNDS type="Node" left="3705" top="6960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="|if(START &lt;= intervalCounter &amp;&amp; intervalCounter &lt;= END){|">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|if(START*interval &lt;= intervalCounter &amp;&amp; intervalCounter &lt;= END*interval){|">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -115,7 +101,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="3750" top="9510" width="100" height="100">
+   <BOUNDS type="Node" left="3720" top="7935" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -129,9 +115,9 @@
    <LINK srcnodeid="15" srcpinname="Output String" dstnodeid="14" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="16" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="4485" top="7140" width="795" height="240">
+   <BOUNDS type="Box" left="4455" top="5565" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4485" top="7140" width="0" height="0">
+   <BOUNDS type="Node" left="4455" top="5565" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="100">
    </PIN>
@@ -149,7 +135,7 @@
    <LINK srcnodeid="16" srcpinname="Output String" dstnodeid="14" dstpinname="To">
    </LINK>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="17">
-   <BOUNDS type="Node" left="3765" top="10065" width="2205" height="270">
+   <BOUNDS type="Node" left="3735" top="8490" width="2205" height="270">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
@@ -163,9 +149,9 @@
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="17" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="18" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="5910" top="7125" width="795" height="240">
+   <BOUNDS type="Box" left="5880" top="5550" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5910" top="7125" width="0" height="0">
+   <BOUNDS type="Node" left="5880" top="5550" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="500">
    </PIN>
@@ -185,7 +171,7 @@
    <LINK srcnodeid="17" srcpinname="Output" dstnodeid="10" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="1725" top="11880" width="100" height="100">
+   <BOUNDS type="Node" left="1695" top="10305" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -205,7 +191,7 @@
    <LINK srcnodeid="1" srcpinname="Output String" dstnodeid="22" dstpinname="Input">
    </LINK>
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="2415" top="12675" width="100" height="100">
+   <BOUNDS type="Node" left="1695" top="11370" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>

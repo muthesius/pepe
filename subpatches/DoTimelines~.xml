@@ -1,0 +1,295 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\DoTimelines.v4p" systemname="DoTimelines" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\DoTimelines.v4p" scrollx="0" scrolly="-360">
+   <NODE id="0" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="885" top="1725" width="6210" height="6150">
+   </BOUNDS>
+   <BOUNDS type="Node" left="885" top="1725" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="|pepe.base&cr;&lf;long previousMillis = 0;        &cr;&lf;long interval = FRAMERATE;&cr;&lf;int intervalCounter = 0;&cr;&lf;&cr;&lf;#include &lt;avr/pgmspace.h&gt;&cr;&lf;&cr;&lf;{{Table}}&cr;&lf;&cr;&lf;pepe.script&cr;&lf;&cr;&lf;  unsigned long currentMillis = millis();&cr;&lf;&cr;&lf; &cr;&lf;  if(currentMillis - previousMillis &gt; interval) {&cr;&lf;    previousMillis = currentMillis;   &cr;&lf;    intervalCounter++;&cr;&lf;    &cr;&lf;    if(THEEND &lt;= intervalCounter){&cr;&lf;     intervalCounter = 1;&cr;&lf;    }&cr;&lf;}&cr;&lf;    &cr;&lf;{{LINES}}&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;        Serial.print(intervalCounter);&cr;&lf;        Serial.print(&quot;\t&quot;);   &cr;&lf;        Serial.println(Timeline00);&cr;&lf;&cr;&lf;pepe|">
+   </PIN>
+   </NODE>
+   <NODE systemname="MakeModule" filename="MakeModule.v4p" componentmode="Hidden" id="1" nodename="MakeModule.v4p">
+   <BOUNDS type="Node" left="5895" top="14055" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5895" top="14055" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-120" top="-120" width="29040" height="15990">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="timelineValve" filename="timelineValve.v4p" nodename="timelineValve.v4p" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="10047" top="2577" width="3810" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6357" top="-1920" width="7380" height="9285">
+   </BOUNDS>
+   <BOUNDS type="Window" left="19125" top="3450" width="7380" height="9285">
+   </BOUNDS>
+   <PIN pinname="Rendering" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   <PIN pinname="Frames" visible="1">
+   </PIN>
+   <PIN pinname="Framerate" visible="1">
+   </PIN>
+   <PIN pinname="Overflow" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="timelineToTable" filename="timelineToTable.v4p" nodename="timelineToTable.v4p" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="11387" top="5059" width="1350" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5937" top="120" width="10900" height="10915">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10155" top="3360" width="18645" height="10905">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="tableToVar" filename="tableToVar.v4p" nodename="tableToVar.v4p" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="13047" top="5081" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7842" top="521" width="10410" height="9120">
+   </BOUNDS>
+   <BOUNDS type="Window" left="15585" top="5475" width="10410" height="9120">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="5" systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="12360" top="11700" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" visible="1" values="{{LINES}}">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="6" systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="10650" top="10725" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" visible="1" values="{{Table}}">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="7" systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="9330" top="9900" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" visible="1" values="THEEND">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="10065" top="9270" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (MinInt .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="12555" top="810" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12555" top="810" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="32">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Framerate">
+   </PIN>
+   </NODE>
+   <NODE id="10" systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="8490" top="9255" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" visible="1" values="FRAMERATE">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="9210" top="8295" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (MinInt .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="12">
+   <BOUNDS type="Node" left="9120" top="5055" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9120" top="5055" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1000">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="9120" top="5805" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output String" dstnodeid="10" dstpinname="Input" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="10" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="7" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="5" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="5" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="6" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="1" dstpinname="Input">
+   </LINK>
+   <NODE id="15" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <BOUNDS type="Box" left="5715" top="15585" width="6255" height="7740">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5715" top="15585" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="15" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="11" dstpinname="Input">
+   </LINK>
+   <NODE id="16" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="TimelinerValve">
+   </PIN>
+   <BOUNDS type="Box" left="10017" top="455" width="615" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10017" top="455" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="2" dstpinname="TimelinerValve">
+   </LINK>
+   <NODE id="17" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="StateTime">
+   </PIN>
+   <BOUNDS type="Box" left="8172" top="545" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8172" top="545" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="2" dstpinname="StateTime">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Framerate">
+   </LINK>
+   <NODE id="18" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Render">
+   </PIN>
+   <BOUNDS type="Box" left="14097" top="515" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14097" top="515" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Render">
+   </LINK>
+   <NODE id="19" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Time">
+   </PIN>
+   <BOUNDS type="Box" left="10080" top="3705" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10080" top="3705" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="19" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Frames" dstnodeid="8" dstpinname="Input">
+   <LINKPOINT x="10065" y="5250">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Count" dstnodeid="4" dstpinname=".. To [ - Select">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Count" dstnodeid="3" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Rendering" dstnodeid="3" dstpinname="Input - Input 1">
+   </LINK>
+   <BOUNDS type="Window" left="4845" top="1980" width="16275" height="14460">
+   </BOUNDS>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE systemname="FlipFlop (Animation)" nodename="FlipFlop (Animation)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="15375" top="10710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Overflow" dstnodeid="21" dstpinname="Reset">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="15420" top="13380" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15420" top="13380" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="SetTime">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="22" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   </PATCH>

@@ -1,0 +1,117 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\lamp.v4p" systemname="lamp" filename="C:\Users\jjh\OneDrive\Projekte\pepe\subpatches\lamp.v4p" scrollx="0" scrolly="1500">
+   <BOUNDS type="Window" left="9495" top="765" width="18735" height="13710">
+   </BOUNDS>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="24" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1680" top="660" width="3840" height="3975">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1680" top="660" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="|VAVA.SETUP&cr;&lf;pinMode({{Pin}},INPUT_PULLUP);&cr;&lf;pinMode({{PinLamp}}, OUTPUT);&cr;&lf;&cr;&lf;VAVA.VARIABLE &cr;&lf;int sensorVal{{Pin}} = digitalRead({{Pin}});&cr;&lf;&cr;&lf;VAVA.SCRIPT&cr;&lf;  if (sensorVal{{Pin}} == HIGH) {&cr;&lf;    digitalWrite({{PinLamp}}, LOW);&cr;&lf;  } &cr;&lf;  else {&cr;&lf;    digitalWrite({{PinLamp}}, HIGH);&cr;&lf;  }&cr;&lf;VAVA|">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="98" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1740" top="10245" width="3870" height="4725">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1740" top="10245" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <PIN pinname="Input String">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="144" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="7770" top="720" width="1500" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7770" top="720" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|Pin 00|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Button">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="147" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="11190" top="900" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11190" top="900" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|Pin 02|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Outpin">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="snapContstrukt" filename="snapContstrukt.v4p" nodename="snapContstrukt.v4p" componentmode="Hidden" id="170">
+   <BOUNDS type="Node" left="1708" top="8411" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="2359" width="18870" height="12105">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5070" top="2175" width="18870" height="12105">
+   </BOUNDS>
+   <PIN pinname="Inputs" visible="1">
+   </PIN>
+   <PIN pinname="Outputs" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="170" srcpinname="Output" dstnodeid="98" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Output String" dstnodeid="170" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="144" srcpinname="Output Enum" dstnodeid="170" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="147" srcpinname="Output Enum" dstnodeid="170" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="171" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="2010" top="5235" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2010" top="5235" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="{{Pin}}">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="171" srcpinname="Output String" dstnodeid="170" dstpinname="Inputs">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="172" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3135" top="5235" width="2160" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3135" top="5235" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="{{PinLamp}}">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="172" srcpinname="Output String" dstnodeid="170" dstpinname="Outputs">
+   </LINK>
+   </PATCH>

@@ -61,7 +61,7 @@ namespace VVVV.Nodes
 				"Analog_A3",
 				"Analog_A4",
 				"Analog_A5",
-				"42"
+				"NoPin"
 			};
 			//Please rename your Enum Type to avoid 
 			//numerous "MyDynamicEnum"s in the system
